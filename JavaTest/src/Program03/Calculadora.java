@@ -44,6 +44,10 @@ public class Calculadora extends javax.swing.JFrame {
         jButton7.setText("jButton7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Calculadora Simples");
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setForeground(java.awt.Color.white);
+        setResizable(false);
 
         jLabel1.setText("Digite o 1° Valor");
 
@@ -59,17 +63,42 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         jBMultiplicacao.setText("Multiplicação(*)");
+        jBMultiplicacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBMultiplicacaoActionPerformed(evt);
+            }
+        });
 
         jBSubtracao.setText("Subtração(-)");
         jBSubtracao.setToolTipText("");
+        jBSubtracao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSubtracaoActionPerformed(evt);
+            }
+        });
 
         jBDivisao.setText("Divisão(/)");
+        jBDivisao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBDivisaoActionPerformed(evt);
+            }
+        });
 
         jBSair.setForeground(new java.awt.Color(255, 0, 0));
         jBSair.setText("Sair");
+        jBSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSairActionPerformed(evt);
+            }
+        });
 
         jBNovoCalculo.setForeground(new java.awt.Color(0, 204, 204));
         jBNovoCalculo.setText("Novo Cálculo");
+        jBNovoCalculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBNovoCalculoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -94,7 +123,7 @@ public class Calculadora extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTValor1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addGap(23, 23, 23)
+                            .addGap(20, 20, 20)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jBSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -141,6 +170,7 @@ public class Calculadora extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBAdicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAdicaoActionPerformed
@@ -165,7 +195,97 @@ public class Calculadora extends javax.swing.JFrame {
         String totalExibir = "";
         totalExibir = "" + total;
         
+        //exibe a string criada na caixa de texto
+        jTResultado.setText(totalExibir);
     }//GEN-LAST:event_jBAdicaoActionPerformed
+
+    private void jBMultiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMultiplicacaoActionPerformed
+        //Cria as variáveis que vão receber os valores
+        //digitados pelo usuário
+        String vlr1;
+        String vlr2;
+        
+        //atribui os valores digitados variáveis criadas.
+        vlr1 = jTValor1.getText();
+        vlr2 = jTValor2.getText();
+        
+        //atribui os valores digitados ás variáveis criadas e converte os valores
+        //que chegam em string para double.
+        double valor1 = Double.parseDouble(vlr1);
+        double valor2 = Double.parseDouble(vlr2);
+        
+        //cria a variável que vai receber a operação aritimética.
+        double total = valor1 * valor2; 
+        
+        //converte o resultado da operação de double para string
+        String totalExibir = "";
+        totalExibir = "" + total;
+        
+        //exibe a string criada na caixa de texto
+        jTResultado.setText(totalExibir);
+    }//GEN-LAST:event_jBMultiplicacaoActionPerformed
+
+    private void jBSubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSubtracaoActionPerformed
+        //Cria as variáveis que vão receber os valores
+        //digitados pelo usuário
+        String vlr1;
+        String vlr2;
+        
+        //atribui os valores digitados variáveis criadas.
+        vlr1 = jTValor1.getText();
+        vlr2 = jTValor2.getText();
+        
+        //atribui os valores digitados ás variáveis criadas e converte os valores
+        //que chegam em string para double.
+        double valor1 = Double.parseDouble(vlr1);
+        double valor2 = Double.parseDouble(vlr2);
+        
+        //cria a variável que vai receber a operação aritimética.
+        double total = valor1 - valor2; 
+        
+        //converte o resultado da operação de double para string
+        String totalExibir = "";
+        totalExibir = "" + total;
+        
+        //exibe a string criada na caixa de texto
+        jTResultado.setText(totalExibir);
+    }//GEN-LAST:event_jBSubtracaoActionPerformed
+
+    private void jBDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBDivisaoActionPerformed
+        //Cria as variáveis que vão receber os valores
+        //digitados pelo usuário
+        String vlr1;
+        String vlr2;
+        
+        //atribui os valores digitados variáveis criadas.
+        vlr1 = jTValor1.getText();
+        vlr2 = jTValor2.getText();
+        
+        //atribui os valores digitados ás variáveis criadas e converte os valores
+        //que chegam em string para double.
+        double valor1 = Double.parseDouble(vlr1);
+        double valor2 = Double.parseDouble(vlr2);
+        
+        //cria a variável que vai receber a operação aritimética.
+        double total = valor1 / valor2; 
+        
+        //converte o resultado da operação de double para string
+        String totalExibir = "";
+        totalExibir = "" + total;
+        
+        //exibe a string criada na caixa de texto
+        jTResultado.setText(totalExibir);
+    }//GEN-LAST:event_jBDivisaoActionPerformed
+
+    private void jBSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSairActionPerformed
+         System.exit(0);
+    }//GEN-LAST:event_jBSairActionPerformed
+
+    private void jBNovoCalculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNovoCalculoActionPerformed
+        jTValor1.setText(null);
+        jTValor2.setText(null);
+        jTResultado.setText(null);
+    }//GEN-LAST:event_jBNovoCalculoActionPerformed
 
     /**
      * @param args the command line arguments
