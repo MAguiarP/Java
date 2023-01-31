@@ -155,10 +155,16 @@ public class Calculadora extends javax.swing.JFrame {
         
         //atribui os valores digitados ás variáveis criadas e converte os valores
         //que chegam em string para double.
-        
         double valor1 = Double.parseDouble(vlr1);
         double valor2 = Double.parseDouble(vlr2);
-                
+        
+        //cria a variável que vai receber a operação aritimética.
+        double total = valor1 + valor2; 
+        
+        //converte o resultado da operação de double para string
+        String totalExibir = "";
+        totalExibir = "" + total;
+        
     }//GEN-LAST:event_jBAdicaoActionPerformed
 
     /**
