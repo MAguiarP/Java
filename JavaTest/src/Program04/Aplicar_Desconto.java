@@ -5,6 +5,7 @@
  */
 package Program04;
 
+import javafx.scene.text.Text;
 import javax.swing.JOptionPane;
 
 /**
@@ -124,10 +125,15 @@ public class Aplicar_Desconto extends javax.swing.JFrame {
       double preco = Double.parseDouble(jTValor.getText());
       double valor_Real = preco;
       
+           
       if(preco > 15){
           valor_Real = preco - (preco*0.05);
           JOptionPane.showMessageDialog(null, "O valor a ser pago pelo produto " + jTNome.getText() + " é de : " + valor_Real); 
       }
+      else{
+        JOptionPane.showMessageDialog(null," O Produto " + jTNome.getText() + " Não possuí Desconto. ");
+      }
+ 
     }//GEN-LAST:event_jBCalcularActionPerformed
 
     private void jBLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimparActionPerformed
