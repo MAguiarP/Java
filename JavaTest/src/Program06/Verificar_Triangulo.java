@@ -140,7 +140,7 @@ public class Verificar_Triangulo extends javax.swing.JFrame {
 
     private void jBLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimparActionPerformed
        jTLadoA.setText(null);
-        jTLadoA.setText(null);
+        jTLadoB.setText(null);
          jTLadoC.setText(null);
           jTVerifica.setText(null);
             
