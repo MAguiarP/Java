@@ -139,7 +139,12 @@ public class Verificar_Triangulo extends javax.swing.JFrame {
     }//GEN-LAST:event_jBSairActionPerformed
 
     private void jBLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimparActionPerformed
-        // TODO add your handling code here:
+       jTLadoA.setText(null);
+        jTLadoA.setText(null);
+         jTLadoC.setText(null);
+          jTVerifica.setText(null);
+            
+         jTLadoA.requestFocus();
     }//GEN-LAST:event_jBLimparActionPerformed
 
     private void jBVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVerificarActionPerformed
