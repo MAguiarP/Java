@@ -5,6 +5,8 @@
  */
 package Program04;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mathe
@@ -30,11 +32,11 @@ public class Aplicar_Desconto extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jTNome = new javax.swing.JTextField();
+        jTValor = new javax.swing.JTextField();
+        jBSair = new javax.swing.JButton();
+        jBLimpar = new javax.swing.JButton();
+        jBCalcular = new javax.swing.JButton();
 
         jButton4.setText("jButton4");
 
@@ -44,15 +46,25 @@ public class Aplicar_Desconto extends javax.swing.JFrame {
 
         jLabel2.setText("Valor do Produto:");
 
-        jButton1.setBackground(new java.awt.Color(255, 0, 0));
-        jButton1.setText("Sair");
+        jBSair.setBackground(new java.awt.Color(255, 0, 0));
+        jBSair.setText("Sair");
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setText("Limpar");
+        jBLimpar.setBackground(new java.awt.Color(204, 204, 204));
+        jBLimpar.setText("Limpar");
+        jBLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBLimparActionPerformed(evt);
+            }
+        });
 
-        jButton3.setBackground(new java.awt.Color(51, 255, 0));
-        jButton3.setForeground(new java.awt.Color(51, 51, 255));
-        jButton3.setText("CALCULAR");
+        jBCalcular.setBackground(new java.awt.Color(51, 255, 0));
+        jBCalcular.setForeground(new java.awt.Color(51, 51, 255));
+        jBCalcular.setText("CALCULAR");
+        jBCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCalcularActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -65,20 +77,20 @@ public class Aplicar_Desconto extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton1)
+                                .addComponent(jBSair)
                                 .addComponent(jLabel2)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTValor, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE))
-                            .addComponent(jTextField1))
+                            .addComponent(jTNome))
                         .addGap(33, 33, 33))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton2)
+                        .addComponent(jBLimpar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3)
+                        .addComponent(jBCalcular)
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -87,21 +99,37 @@ public class Aplicar_Desconto extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jBCalcular)
+                    .addComponent(jBSair)
+                    .addComponent(jBLimpar))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCalcularActionPerformed
+      double preco = Double.parseDouble(jTValor.getText());
+      double valor_Real = preco;
+      
+      if(preco > 15){
+          valor_Real = preco - (preco*0.05);
+          JOptionPane.showMessageDialog(null, "O valor a ser pago pelo produto " + jTNome.getText() + " é de : " + valor_Real); 
+      }
+    }//GEN-LAST:event_jBCalcularActionPerformed
+
+    private void jBLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimparActionPerformed
+       jTNome.setText(null);
+       jTValor.setText(null);
+       jTNome.requestFocus();
+    }//GEN-LAST:event_jBLimparActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,13 +167,13 @@ public class Aplicar_Desconto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jBCalcular;
+    private javax.swing.JButton jBLimpar;
+    private javax.swing.JButton jBSair;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTNome;
+    private javax.swing.JTextField jTValor;
     // End of variables declaration//GEN-END:variables
 }
