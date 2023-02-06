@@ -150,7 +150,20 @@ public class Verificar_Triangulo extends javax.swing.JFrame {
         ladoA = Integer.parseInt(jTLadoA.getText());
          ladoB = Integer.parseInt(jTLadoB.getText());
           ladoC = Integer.parseInt(jTLadoC.getText());
+          
+        if(ladoA < ladoB + ladoC && ladoB < ladoA + ladoC && ladoC < ladoA + ladoB){
+            if(ladoA == ladoB && ladoB == ladoC && ladoA == ladoC) {
+                jTVerifica.setText("Triângulo Equilátero");
+            }else if(ladoA == ladoB || ladoA == ladoC || ladoB == ladoC ){
+                jTVerifica.setText("Triângulo Isósceles");
+            }else{
+                jTVerifica.setText("Triângulo Escaleno");
+            }
+        }
         
+        else{
+            jTVerifica.setText("Os valores digitados não formam um triângulo!!!");
+        }
         
     }//GEN-LAST:event_jBVerificarActionPerformed
 
