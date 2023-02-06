@@ -48,6 +48,11 @@ public class Aplicar_Desconto extends javax.swing.JFrame {
 
         jBSair.setBackground(new java.awt.Color(255, 0, 0));
         jBSair.setText("Sair");
+        jBSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSairActionPerformed(evt);
+            }
+        });
 
         jBLimpar.setBackground(new java.awt.Color(204, 204, 204));
         jBLimpar.setText("Limpar");
@@ -130,6 +135,10 @@ public class Aplicar_Desconto extends javax.swing.JFrame {
        jTValor.setText(null);
        jTNome.requestFocus();
     }//GEN-LAST:event_jBLimparActionPerformed
+
+    private void jBSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSairActionPerformed
+        System.exit (0);
+    }//GEN-LAST:event_jBSairActionPerformed
 
     /**
      * @param args the command line arguments
