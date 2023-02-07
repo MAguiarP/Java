@@ -184,6 +184,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Veja o que diz seu Signo"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBVejaActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -5,6 +5,8 @@
  */
 package Program07;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mathe
@@ -82,6 +84,11 @@ public class Escolhendo_Signo extends javax.swing.JFrame {
 
         jBVeja.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jBVeja.setText("Veja o que diz seu Signo");
+        jBVeja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBVejaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -157,6 +164,45 @@ public class Escolhendo_Signo extends javax.swing.JFrame {
     private void jBSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSairActionPerformed
       System.exit(0);
     }//GEN-LAST:event_jBSairActionPerformed
+
+    private void jBVejaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVejaActionPerformed
+        if(jRAries.isSelected()){
+            JOptionPane.showMessageDialog(null, "O primeiro signo do Zodiaco, está sempre tomando a frente das situações.");
+        }
+        else if(jRTouro.isSelected()){
+            JOptionPane.showMessageDialog(null, "Pode ser do elemento Terra, gosta de ter o controle das situações em suas mãos.");
+        }
+        else if(jRGemeos.isSelected()){
+            JOptionPane.showMessageDialog(null, "É inteligente, dinâmica, vibrante, sempre em busca de novos desafios.");
+        }
+        else if(jRCancer.isSelected()){
+            JOptionPane.showMessageDialog(null, "Tem uma grande intuição, que a guia nos momentos-chave do destino..");
+        }
+        else if(jRLeoes.isSelected()){
+            JOptionPane.showMessageDialog(null, "Tem muitos talentos, adora balada, música, cinema e ama animais de estimação.");
+        }
+        else if(jRVirgem.isSelected()){
+            JOptionPane.showMessageDialog(null, "Tem muito talento para escrita, e têm um jeitinho crítico, que pode ajudá-las na profissão.");
+        }
+        else if(jRLibra.isSelected()){
+            JOptionPane.showMessageDialog(null, "Você, sabe o valor das outras pessoas, das boas amizades e dos relacionamentos afetivos.");
+        }
+        else if(jREscorpiao.isSelected()){
+            JOptionPane.showMessageDialog(null, "Sua persistência e teimosia podem ultrapassar muitas barreiras.");
+        }
+        else if(jRSagitario.isSelected()){
+            JOptionPane.showMessageDialog(null, "Seu jeito expansivo não passa despercebido.");
+        }
+        else if(jRCapricornio.isSelected()){
+            JOptionPane.showMessageDialog(null, "Você não foge de uma boa discussão e adora uma balada.");
+        }
+        else if(jRAquario.isSelected()){
+            JOptionPane.showMessageDialog(null, "Seu signo é chamado de futurista.");
+        }
+        else if(jRPeixes.isSelected()){
+            JOptionPane.showMessageDialog(null, "Tem desejo de fazer algo grandioso pelo mundo.");
+        }
+    }//GEN-LAST:event_jBVejaActionPerformed
 
     /**
      * @param args the command line arguments
