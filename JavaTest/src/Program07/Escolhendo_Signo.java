@@ -27,53 +27,61 @@ public class Escolhendo_Signo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
-        jRadioButton11 = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jRAries = new javax.swing.JRadioButton();
+        jRTouro = new javax.swing.JRadioButton();
+        jRGemeos = new javax.swing.JRadioButton();
+        jRCancer = new javax.swing.JRadioButton();
+        jRLeoes = new javax.swing.JRadioButton();
+        jRVirgem = new javax.swing.JRadioButton();
+        jRLibra = new javax.swing.JRadioButton();
+        jREscorpiao = new javax.swing.JRadioButton();
+        jRAquario = new javax.swing.JRadioButton();
+        jRCapricornio = new javax.swing.JRadioButton();
+        jRPeixes = new javax.swing.JRadioButton();
+        jRSagitario = new javax.swing.JRadioButton();
+        jBSair = new javax.swing.JButton();
+        jBVeja = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Escolha seu Signo");
         setIconImages(null);
         setResizable(false);
 
-        jRadioButton1.setText("Aries");
+        jRAries.setText("Aries");
 
-        jRadioButton2.setText("Touro");
+        jRTouro.setText("Touro");
 
-        jRadioButton3.setText("Gêmeos");
+        jRGemeos.setText("Gêmeos");
 
-        jRadioButton4.setText("Câncer");
+        jRCancer.setText("Câncer");
 
-        jRadioButton5.setText("Leões");
+        jRLeoes.setText("Leões");
 
-        jRadioButton6.setText("Virgem");
+        jRVirgem.setText("Virgem");
+        jRVirgem.setToolTipText("");
 
-        jRadioButton7.setText("Libra");
+        jRLibra.setText("Libra");
 
-        jRadioButton8.setText("Escorpião");
+        jREscorpiao.setText("Escorpião");
+        jREscorpiao.setToolTipText("");
 
-        jRadioButton9.setText("Aquário");
+        jRAquario.setText("Aquário");
 
-        jRadioButton10.setText("Capricórnio");
+        jRCapricornio.setText("Capricórnio");
 
-        jRadioButton11.setText("Peixes");
+        jRPeixes.setText("Peixes");
 
-        jRadioButton12.setText("Sagitário");
+        jRSagitario.setText("Sagitário");
 
-        jButton1.setText("Sair");
+        jBSair.setText("Sair");
+        jBSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSairActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Veja o que diz seu Signo");
+        jBVeja.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jBVeja.setText("Veja o que diz seu Signo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,26 +92,26 @@ public class Escolhendo_Signo extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton1)
-                            .addComponent(jRadioButton2)
-                            .addComponent(jRadioButton3)
-                            .addComponent(jRadioButton4))
+                            .addComponent(jRAries)
+                            .addComponent(jRTouro)
+                            .addComponent(jRGemeos)
+                            .addComponent(jRCancer))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton5)
-                            .addComponent(jRadioButton6)
-                            .addComponent(jRadioButton7)
-                            .addComponent(jRadioButton8))
-                        .addGap(71, 71, 71)
+                            .addComponent(jRLeoes)
+                            .addComponent(jRVirgem)
+                            .addComponent(jRLibra)
+                            .addComponent(jREscorpiao))
+                        .addGap(61, 61, 61)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton12)
-                            .addComponent(jRadioButton10)
-                            .addComponent(jRadioButton9)
-                            .addComponent(jRadioButton11)))
+                            .addComponent(jRSagitario)
+                            .addComponent(jRCapricornio)
+                            .addComponent(jRAquario)
+                            .addComponent(jRPeixes)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jBVeja, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBSair, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -113,38 +121,42 @@ public class Escolhendo_Signo extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(jRadioButton10)
+                        .addComponent(jRCapricornio)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton9)
+                        .addComponent(jRAquario)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton11))
-                    .addComponent(jRadioButton12)
+                        .addComponent(jRPeixes))
+                    .addComponent(jRSagitario)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRadioButton1)
+                        .addComponent(jRAries)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton2)
+                        .addComponent(jRTouro)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton3)
+                        .addComponent(jRGemeos)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton4))
+                        .addComponent(jRCancer))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRadioButton5)
+                        .addComponent(jRLeoes)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton6)
+                        .addComponent(jRVirgem)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton7)
+                        .addComponent(jRLibra)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButton8)))
+                        .addComponent(jREscorpiao)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBSair, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBVeja, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSairActionPerformed
+      System.exit(0);
+    }//GEN-LAST:event_jBSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,19 +194,19 @@ public class Escolhendo_Signo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
+    private javax.swing.JButton jBSair;
+    private javax.swing.JButton jBVeja;
+    private javax.swing.JRadioButton jRAquario;
+    private javax.swing.JRadioButton jRAries;
+    private javax.swing.JRadioButton jRCancer;
+    private javax.swing.JRadioButton jRCapricornio;
+    private javax.swing.JRadioButton jREscorpiao;
+    private javax.swing.JRadioButton jRGemeos;
+    private javax.swing.JRadioButton jRLeoes;
+    private javax.swing.JRadioButton jRLibra;
+    private javax.swing.JRadioButton jRPeixes;
+    private javax.swing.JRadioButton jRSagitario;
+    private javax.swing.JRadioButton jRTouro;
+    private javax.swing.JRadioButton jRVirgem;
     // End of variables declaration//GEN-END:variables
 }

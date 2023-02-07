@@ -33,30 +33,30 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jRadioButton1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRAries" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRTouro" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRGemeos" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRCancer" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jRadioButton5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton6" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton7" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton8" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRLeoes" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRVirgem" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRLibra" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jREscorpiao" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jRadioButton12" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton10" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton9" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton11" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRSagitario" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRCapricornio" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRAquario" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRPeixes" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="jButton2" min="-2" pref="161" max="-2" attributes="0"/>
-                      <EmptySpace pref="63" max="32767" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="146" max="-2" attributes="0"/>
+                      <Component id="jBVeja" pref="196" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jBSair" min="-2" pref="146" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -70,36 +70,36 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jRadioButton10" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRCapricornio" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRadioButton9" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRAquario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRadioButton11" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRPeixes" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jRadioButton12" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRSagitario" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRAries" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRTouro" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRGemeos" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRadioButton4" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRCancer" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Component id="jRadioButton5" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRLeoes" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRVirgem" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRadioButton7" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRLibra" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRadioButton8" min="-2" max="-2" attributes="0"/>
+                      <Component id="jREscorpiao" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jButton1" min="-2" pref="34" max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="jBSair" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="jBVeja" min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -107,73 +107,81 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+    <Component class="javax.swing.JRadioButton" name="jRAries">
       <Properties>
         <Property name="text" type="java.lang.String" value="Aries"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+    <Component class="javax.swing.JRadioButton" name="jRTouro">
       <Properties>
         <Property name="text" type="java.lang.String" value="Touro"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+    <Component class="javax.swing.JRadioButton" name="jRGemeos">
       <Properties>
         <Property name="text" type="java.lang.String" value="G&#xea;meos"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton4">
+    <Component class="javax.swing.JRadioButton" name="jRCancer">
       <Properties>
         <Property name="text" type="java.lang.String" value="C&#xe2;ncer"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton5">
+    <Component class="javax.swing.JRadioButton" name="jRLeoes">
       <Properties>
         <Property name="text" type="java.lang.String" value="Le&#xf5;es"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton6">
+    <Component class="javax.swing.JRadioButton" name="jRVirgem">
       <Properties>
         <Property name="text" type="java.lang.String" value="Virgem"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton7">
+    <Component class="javax.swing.JRadioButton" name="jRLibra">
       <Properties>
         <Property name="text" type="java.lang.String" value="Libra"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton8">
+    <Component class="javax.swing.JRadioButton" name="jREscorpiao">
       <Properties>
         <Property name="text" type="java.lang.String" value="Escorpi&#xe3;o"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton9">
+    <Component class="javax.swing.JRadioButton" name="jRAquario">
       <Properties>
         <Property name="text" type="java.lang.String" value="Aqu&#xe1;rio"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton10">
+    <Component class="javax.swing.JRadioButton" name="jRCapricornio">
       <Properties>
         <Property name="text" type="java.lang.String" value="Capric&#xf3;rnio"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton11">
+    <Component class="javax.swing.JRadioButton" name="jRPeixes">
       <Properties>
         <Property name="text" type="java.lang.String" value="Peixes"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton12">
+    <Component class="javax.swing.JRadioButton" name="jRSagitario">
       <Properties>
         <Property name="text" type="java.lang.String" value="Sagit&#xe1;rio"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="jBSair">
       <Properties>
         <Property name="text" type="java.lang.String" value="Sair"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBSairActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="jBVeja">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="12" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Veja o que diz seu Signo"/>
       </Properties>
     </Component>
