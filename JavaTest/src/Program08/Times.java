@@ -5,6 +5,8 @@
  */
 package Program08;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mathe
@@ -28,34 +30,34 @@ public class Times extends javax.swing.JFrame {
     private void initComponents() {
 
         GrupoButton = new javax.swing.ButtonGroup();
-        jRCapricornio = new javax.swing.JRadioButton();
-        jRPeixes = new javax.swing.JRadioButton();
-        jRSagitario = new javax.swing.JRadioButton();
+        jRInter = new javax.swing.JRadioButton();
+        jRCru = new javax.swing.JRadioButton();
+        jRCoritiba = new javax.swing.JRadioButton();
         jBSair = new javax.swing.JButton();
         jBVeja = new javax.swing.JButton();
-        jRAries = new javax.swing.JRadioButton();
-        jRTouro = new javax.swing.JRadioButton();
-        jRGemeos = new javax.swing.JRadioButton();
-        jRCancer = new javax.swing.JRadioButton();
-        jRLeoes = new javax.swing.JRadioButton();
-        jRVirgem = new javax.swing.JRadioButton();
-        jRLibra = new javax.swing.JRadioButton();
-        jREscorpiao = new javax.swing.JRadioButton();
-        jRAquario = new javax.swing.JRadioButton();
+        jRAtleticomg = new javax.swing.JRadioButton();
+        jRAtleticopr = new javax.swing.JRadioButton();
+        jRPalmeiras = new javax.swing.JRadioButton();
+        jRCorinthians = new javax.swing.JRadioButton();
+        jRSaoPaulo = new javax.swing.JRadioButton();
+        jRBotafogo = new javax.swing.JRadioButton();
+        jRFlu = new javax.swing.JRadioButton();
+        jRFla = new javax.swing.JRadioButton();
+        jRGre = new javax.swing.JRadioButton();
         jRSantos = new javax.swing.JRadioButton();
         jRVasco = new javax.swing.JRadioButton();
         jRSport = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        GrupoButton.add(jRCapricornio);
-        jRCapricornio.setText("Internacional");
+        GrupoButton.add(jRInter);
+        jRInter.setText("Internacional");
 
-        GrupoButton.add(jRPeixes);
-        jRPeixes.setText("Cruzeiro");
+        GrupoButton.add(jRCru);
+        jRCru.setText("Cruzeiro");
 
-        GrupoButton.add(jRSagitario);
-        jRSagitario.setText("Coritiba");
+        GrupoButton.add(jRCoritiba);
+        jRCoritiba.setText("Coritiba");
 
         jBSair.setText("Sair");
         jBSair.addActionListener(new java.awt.event.ActionListener() {
@@ -72,34 +74,34 @@ public class Times extends javax.swing.JFrame {
             }
         });
 
-        GrupoButton.add(jRAries);
-        jRAries.setText("Atlético - MG");
+        GrupoButton.add(jRAtleticomg);
+        jRAtleticomg.setText("Atlético - MG");
 
-        GrupoButton.add(jRTouro);
-        jRTouro.setText("Atlético - PR");
+        GrupoButton.add(jRAtleticopr);
+        jRAtleticopr.setText("Atlético - PR");
 
-        GrupoButton.add(jRGemeos);
-        jRGemeos.setText("Palmeiras");
+        GrupoButton.add(jRPalmeiras);
+        jRPalmeiras.setText("Palmeiras");
 
-        GrupoButton.add(jRCancer);
-        jRCancer.setText("Corinthians");
+        GrupoButton.add(jRCorinthians);
+        jRCorinthians.setText("Corinthians");
 
-        GrupoButton.add(jRLeoes);
-        jRLeoes.setText("São Paulo");
+        GrupoButton.add(jRSaoPaulo);
+        jRSaoPaulo.setText("São Paulo");
 
-        GrupoButton.add(jRVirgem);
-        jRVirgem.setText("Botafogo");
-        jRVirgem.setToolTipText("");
+        GrupoButton.add(jRBotafogo);
+        jRBotafogo.setText("Botafogo");
+        jRBotafogo.setToolTipText("");
 
-        GrupoButton.add(jRLibra);
-        jRLibra.setText("Fluminense");
+        GrupoButton.add(jRFlu);
+        jRFlu.setText("Fluminense");
 
-        GrupoButton.add(jREscorpiao);
-        jREscorpiao.setText("Flamengo");
-        jREscorpiao.setToolTipText("");
+        GrupoButton.add(jRFla);
+        jRFla.setText("Flamengo");
+        jRFla.setToolTipText("");
 
-        GrupoButton.add(jRAquario);
-        jRAquario.setText("Grêmio");
+        GrupoButton.add(jRGre);
+        jRGre.setText("Grêmio");
 
         GrupoButton.add(jRSantos);
         jRSantos.setText("Santos");
@@ -118,24 +120,24 @@ public class Times extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRAries)
-                    .addComponent(jRTouro)
-                    .addComponent(jRGemeos)
-                    .addComponent(jRCancer)
+                    .addComponent(jRAtleticomg)
+                    .addComponent(jRAtleticopr)
+                    .addComponent(jRPalmeiras)
+                    .addComponent(jRCorinthians)
                     .addComponent(jRSantos))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRVasco)
-                    .addComponent(jRLeoes)
-                    .addComponent(jRVirgem)
-                    .addComponent(jRLibra)
-                    .addComponent(jREscorpiao))
+                    .addComponent(jRSaoPaulo)
+                    .addComponent(jRBotafogo)
+                    .addComponent(jRFlu)
+                    .addComponent(jRFla))
                 .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRSagitario)
-                    .addComponent(jRCapricornio)
-                    .addComponent(jRAquario)
-                    .addComponent(jRPeixes)
+                    .addComponent(jRCoritiba)
+                    .addComponent(jRInter)
+                    .addComponent(jRGre)
+                    .addComponent(jRCru)
                     .addComponent(jRSport))
                 .addGap(8, 8, 8))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -152,28 +154,28 @@ public class Times extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(jRCapricornio)
+                        .addComponent(jRInter)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRAquario)
+                        .addComponent(jRGre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRPeixes))
-                    .addComponent(jRSagitario)
+                        .addComponent(jRCru))
+                    .addComponent(jRCoritiba)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRAries)
+                        .addComponent(jRAtleticomg)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRTouro)
+                        .addComponent(jRAtleticopr, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRGemeos)
+                        .addComponent(jRPalmeiras)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRCancer))
+                        .addComponent(jRCorinthians))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jRLeoes)
+                        .addComponent(jRSaoPaulo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRVirgem)
+                        .addComponent(jRBotafogo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRLibra)
+                        .addComponent(jRFlu)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jREscorpiao)))
+                        .addComponent(jRFla)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRVasco)
@@ -194,40 +196,40 @@ public class Times extends javax.swing.JFrame {
     }//GEN-LAST:event_jBSairActionPerformed
 
     private void jBVejaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVejaActionPerformed
-        if(jRAries.isSelected()){
+        if(jRAtleticomg.isSelected()){
             JOptionPane.showMessageDialog(null, "O primeiro signo do Zodiaco, está sempre tomando a frente das situações.");
         }
-        else if(jRTouro.isSelected()){
+        else if(jRAtleticopr.isSelected()){
             JOptionPane.showMessageDialog(null, "Pode ser do elemento Terra, gosta de ter o controle das situações em suas mãos.");
         }
-        else if(jRGemeos.isSelected()){
+        else if(jRPalmeiras.isSelected()){
             JOptionPane.showMessageDialog(null, "É inteligente, dinâmica, vibrante, sempre em busca de novos desafios.");
         }
-        else if(jRCancer.isSelected()){
+        else if(jRCorinthians.isSelected()){
             JOptionPane.showMessageDialog(null, "Tem uma grande intuição, que a guia nos momentos-chave do destino..");
         }
-        else if(jRLeoes.isSelected()){
+        else if(jRSaoPaulo.isSelected()){
             JOptionPane.showMessageDialog(null, "Tem muitos talentos, adora balada, música, cinema e ama animais de estimação.");
         }
-        else if(jRVirgem.isSelected()){
+        else if(jRBotafogo.isSelected()){
             JOptionPane.showMessageDialog(null, "Tem muito talento para escrita, e têm um jeitinho crítico, que pode ajudá-las na profissão.");
         }
-        else if(jRLibra.isSelected()){
+        else if(jRFlu.isSelected()){
             JOptionPane.showMessageDialog(null, "Você, sabe o valor das outras pessoas, das boas amizades e dos relacionamentos afetivos.");
         }
-        else if(jREscorpiao.isSelected()){
+        else if(jRFla.isSelected()){
             JOptionPane.showMessageDialog(null, "Sua persistência e teimosia podem ultrapassar muitas barreiras.");
         }
-        else if(jRSagitario.isSelected()){
+        else if(jRCoritiba.isSelected()){
             JOptionPane.showMessageDialog(null, "Seu jeito expansivo não passa despercebido.");
         }
-        else if(jRCapricornio.isSelected()){
+        else if(jRInter.isSelected()){
             JOptionPane.showMessageDialog(null, "Você não foge de uma boa discussão e adora uma balada.");
         }
-        else if(jRAquario.isSelected()){
+        else if(jRGre.isSelected()){
             JOptionPane.showMessageDialog(null, "Seu signo é chamado de futurista.");
         }
-        else if(jRPeixes.isSelected()){
+        else if(jRCru.isSelected()){
             JOptionPane.showMessageDialog(null, "Tem desejo de fazer algo grandioso pelo mundo.");
         }
     }//GEN-LAST:event_jBVejaActionPerformed
@@ -271,20 +273,20 @@ public class Times extends javax.swing.JFrame {
     private javax.swing.ButtonGroup GrupoButton;
     private javax.swing.JButton jBSair;
     private javax.swing.JButton jBVeja;
-    private javax.swing.JRadioButton jRAquario;
-    private javax.swing.JRadioButton jRAries;
-    private javax.swing.JRadioButton jRCancer;
-    private javax.swing.JRadioButton jRCapricornio;
-    private javax.swing.JRadioButton jREscorpiao;
-    private javax.swing.JRadioButton jRGemeos;
-    private javax.swing.JRadioButton jRLeoes;
-    private javax.swing.JRadioButton jRLibra;
-    private javax.swing.JRadioButton jRPeixes;
-    private javax.swing.JRadioButton jRSagitario;
+    private javax.swing.JRadioButton jRAtleticomg;
+    private javax.swing.JRadioButton jRAtleticopr;
+    private javax.swing.JRadioButton jRBotafogo;
+    private javax.swing.JRadioButton jRCorinthians;
+    private javax.swing.JRadioButton jRCoritiba;
+    private javax.swing.JRadioButton jRCru;
+    private javax.swing.JRadioButton jRFla;
+    private javax.swing.JRadioButton jRFlu;
+    private javax.swing.JRadioButton jRGre;
+    private javax.swing.JRadioButton jRInter;
+    private javax.swing.JRadioButton jRPalmeiras;
     private javax.swing.JRadioButton jRSantos;
+    private javax.swing.JRadioButton jRSaoPaulo;
     private javax.swing.JRadioButton jRSport;
-    private javax.swing.JRadioButton jRTouro;
     private javax.swing.JRadioButton jRVasco;
-    private javax.swing.JRadioButton jRVirgem;
     // End of variables declaration//GEN-END:variables
 }

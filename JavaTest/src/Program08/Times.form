@@ -30,26 +30,26 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jRAries" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRTouro" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRGemeos" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRCancer" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRAtleticomg" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRAtleticopr" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRPalmeiras" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRCorinthians" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jRSantos" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jRVasco" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRLeoes" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRVirgem" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRLibra" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jREscorpiao" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRSaoPaulo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRBotafogo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRFlu" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRFla" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jRSagitario" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRCapricornio" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRAquario" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRPeixes" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRCoritiba" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRInter" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRGre" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRCru" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jRSport" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
@@ -70,30 +70,30 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jRCapricornio" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRInter" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRAquario" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRGre" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRPeixes" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRCru" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jRSagitario" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRCoritiba" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jRAries" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRAtleticomg" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRTouro" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRAtleticopr" min="-2" pref="23" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRGemeos" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRPalmeiras" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRCancer" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRCorinthians" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jRLeoes" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRSaoPaulo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRVirgem" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRBotafogo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jRLibra" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRFlu" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jREscorpiao" min="-2" max="-2" attributes="0"/>
+                      <Component id="jRFla" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -113,7 +113,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JRadioButton" name="jRCapricornio">
+    <Component class="javax.swing.JRadioButton" name="jRInter">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GrupoButton"/>
@@ -121,7 +121,7 @@
         <Property name="text" type="java.lang.String" value="Internacional"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRPeixes">
+    <Component class="javax.swing.JRadioButton" name="jRCru">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GrupoButton"/>
@@ -129,7 +129,7 @@
         <Property name="text" type="java.lang.String" value="Cruzeiro"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRSagitario">
+    <Component class="javax.swing.JRadioButton" name="jRCoritiba">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GrupoButton"/>
@@ -156,7 +156,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBVejaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRAries">
+    <Component class="javax.swing.JRadioButton" name="jRAtleticomg">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GrupoButton"/>
@@ -164,7 +164,7 @@
         <Property name="text" type="java.lang.String" value="Atl&#xe9;tico - MG"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRTouro">
+    <Component class="javax.swing.JRadioButton" name="jRAtleticopr">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GrupoButton"/>
@@ -172,7 +172,7 @@
         <Property name="text" type="java.lang.String" value="Atl&#xe9;tico - PR"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRGemeos">
+    <Component class="javax.swing.JRadioButton" name="jRPalmeiras">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GrupoButton"/>
@@ -180,7 +180,7 @@
         <Property name="text" type="java.lang.String" value="Palmeiras"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRCancer">
+    <Component class="javax.swing.JRadioButton" name="jRCorinthians">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GrupoButton"/>
@@ -188,7 +188,7 @@
         <Property name="text" type="java.lang.String" value="Corinthians"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRLeoes">
+    <Component class="javax.swing.JRadioButton" name="jRSaoPaulo">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GrupoButton"/>
@@ -196,7 +196,7 @@
         <Property name="text" type="java.lang.String" value="S&#xe3;o Paulo"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRVirgem">
+    <Component class="javax.swing.JRadioButton" name="jRBotafogo">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GrupoButton"/>
@@ -205,7 +205,7 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRLibra">
+    <Component class="javax.swing.JRadioButton" name="jRFlu">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GrupoButton"/>
@@ -213,7 +213,7 @@
         <Property name="text" type="java.lang.String" value="Fluminense"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jREscorpiao">
+    <Component class="javax.swing.JRadioButton" name="jRFla">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GrupoButton"/>
@@ -222,7 +222,7 @@
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRAquario">
+    <Component class="javax.swing.JRadioButton" name="jRGre">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="GrupoButton"/>
