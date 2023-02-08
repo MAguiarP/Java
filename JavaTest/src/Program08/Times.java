@@ -197,28 +197,28 @@ public class Times extends javax.swing.JFrame {
 
     private void jBVejaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVejaActionPerformed
         if(jRAtleticomg.isSelected()){
-            JOptionPane.showMessageDialog(null, "O primeiro signo do Zodiaco, está sempre tomando a frente das situações.");
+            JOptionPane.showMessageDialog(null, "25 de Março de 1908");
         }
         else if(jRAtleticopr.isSelected()){
-            JOptionPane.showMessageDialog(null, "Pode ser do elemento Terra, gosta de ter o controle das situações em suas mãos.");
+            JOptionPane.showMessageDialog(null, "26 de Março de 1924");
         }
         else if(jRPalmeiras.isSelected()){
-            JOptionPane.showMessageDialog(null, "É inteligente, dinâmica, vibrante, sempre em busca de novos desafios.");
+            JOptionPane.showMessageDialog(null, "26 de Agosto de 1914");
         }
         else if(jRCorinthians.isSelected()){
-            JOptionPane.showMessageDialog(null, "Tem uma grande intuição, que a guia nos momentos-chave do destino..");
+            JOptionPane.showMessageDialog(null, "1 de Setembro de 1910");
         }
         else if(jRSaoPaulo.isSelected()){
-            JOptionPane.showMessageDialog(null, "Tem muitos talentos, adora balada, música, cinema e ama animais de estimação.");
+            JOptionPane.showMessageDialog(null, "27 de Janeiro de 1930");
         }
         else if(jRBotafogo.isSelected()){
-            JOptionPane.showMessageDialog(null, "Tem muito talento para escrita, e têm um jeitinho crítico, que pode ajudá-las na profissão.");
+            JOptionPane.showMessageDialog(null, "1 de Julho de 1894");
         }
         else if(jRFlu.isSelected()){
-            JOptionPane.showMessageDialog(null, "Você, sabe o valor das outras pessoas, das boas amizades e dos relacionamentos afetivos.");
+            JOptionPane.showMessageDialog(null, "21 de Julho de 1902");
         }
         else if(jRFla.isSelected()){
-            JOptionPane.showMessageDialog(null, "Sua persistência e teimosia podem ultrapassar muitas barreiras.");
+            JOptionPane.showMessageDialog(null, "17 de Novembro de 1895");
         }
         else if(jRCoritiba.isSelected()){
             JOptionPane.showMessageDialog(null, "Seu jeito expansivo não passa despercebido.");
