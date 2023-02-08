@@ -3,20 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Program07;
-
-import javax.swing.JOptionPane;
+package Program08;
 
 /**
  *
  * @author mathe
  */
-public class Escolhendo_Signo extends javax.swing.JFrame {
+public class Times extends javax.swing.JFrame {
 
     /**
-     * Creates new form Escolhendo_Signo
+     * Creates new form Times
      */
-    public Escolhendo_Signo() {
+    public Times() {
         initComponents();
     }
 
@@ -29,7 +27,12 @@ public class Escolhendo_Signo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jBGGrupoOpcoes = new javax.swing.ButtonGroup();
+        GrupoButton = new javax.swing.ButtonGroup();
+        jRCapricornio = new javax.swing.JRadioButton();
+        jRPeixes = new javax.swing.JRadioButton();
+        jRSagitario = new javax.swing.JRadioButton();
+        jBSair = new javax.swing.JButton();
+        jBVeja = new javax.swing.JButton();
         jRAries = new javax.swing.JRadioButton();
         jRTouro = new javax.swing.JRadioButton();
         jRGemeos = new javax.swing.JRadioButton();
@@ -39,54 +42,20 @@ public class Escolhendo_Signo extends javax.swing.JFrame {
         jRLibra = new javax.swing.JRadioButton();
         jREscorpiao = new javax.swing.JRadioButton();
         jRAquario = new javax.swing.JRadioButton();
-        jRCapricornio = new javax.swing.JRadioButton();
-        jRPeixes = new javax.swing.JRadioButton();
-        jRSagitario = new javax.swing.JRadioButton();
-        jBSair = new javax.swing.JButton();
-        jBVeja = new javax.swing.JButton();
+        jRSantos = new javax.swing.JRadioButton();
+        jRVasco = new javax.swing.JRadioButton();
+        jRSport = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Escolha seu Signo");
-        setIconImages(null);
-        setResizable(false);
 
-        jBGGrupoOpcoes.add(jRAries);
-        jRAries.setText("Aries");
+        GrupoButton.add(jRCapricornio);
+        jRCapricornio.setText("Internacional");
 
-        jBGGrupoOpcoes.add(jRTouro);
-        jRTouro.setText("Touro");
+        GrupoButton.add(jRPeixes);
+        jRPeixes.setText("Cruzeiro");
 
-        jBGGrupoOpcoes.add(jRGemeos);
-        jRGemeos.setText("Gêmeos");
-
-        jBGGrupoOpcoes.add(jRCancer);
-        jRCancer.setText("Câncer");
-
-        jBGGrupoOpcoes.add(jRLeoes);
-        jRLeoes.setText("Leões");
-
-        jBGGrupoOpcoes.add(jRVirgem);
-        jRVirgem.setText("Virgem");
-        jRVirgem.setToolTipText("");
-
-        jBGGrupoOpcoes.add(jRLibra);
-        jRLibra.setText("Libra");
-
-        jBGGrupoOpcoes.add(jREscorpiao);
-        jREscorpiao.setText("Escorpião");
-        jREscorpiao.setToolTipText("");
-
-        jBGGrupoOpcoes.add(jRAquario);
-        jRAquario.setText("Aquário");
-
-        jBGGrupoOpcoes.add(jRCapricornio);
-        jRCapricornio.setText("Capricórnio");
-
-        jBGGrupoOpcoes.add(jRPeixes);
-        jRPeixes.setText("Peixes");
-
-        jBGGrupoOpcoes.add(jRSagitario);
-        jRSagitario.setText("Sagitário");
+        GrupoButton.add(jRSagitario);
+        jRSagitario.setText("Coritiba");
 
         jBSair.setText("Sair");
         jBSair.addActionListener(new java.awt.event.ActionListener() {
@@ -96,12 +65,51 @@ public class Escolhendo_Signo extends javax.swing.JFrame {
         });
 
         jBVeja.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jBVeja.setText("Veja o que diz seu Signo");
+        jBVeja.setText("Veja a data de Fundação");
         jBVeja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBVejaActionPerformed(evt);
             }
         });
+
+        GrupoButton.add(jRAries);
+        jRAries.setText("Atlético - MG");
+
+        GrupoButton.add(jRTouro);
+        jRTouro.setText("Atlético - PR");
+
+        GrupoButton.add(jRGemeos);
+        jRGemeos.setText("Palmeiras");
+
+        GrupoButton.add(jRCancer);
+        jRCancer.setText("Corinthians");
+
+        GrupoButton.add(jRLeoes);
+        jRLeoes.setText("São Paulo");
+
+        GrupoButton.add(jRVirgem);
+        jRVirgem.setText("Botafogo");
+        jRVirgem.setToolTipText("");
+
+        GrupoButton.add(jRLibra);
+        jRLibra.setText("Fluminense");
+
+        GrupoButton.add(jREscorpiao);
+        jREscorpiao.setText("Flamengo");
+        jREscorpiao.setToolTipText("");
+
+        GrupoButton.add(jRAquario);
+        jRAquario.setText("Grêmio");
+
+        GrupoButton.add(jRSantos);
+        jRSantos.setText("Santos");
+
+        GrupoButton.add(jRVasco);
+        jRVasco.setText("Vasco");
+        jRVasco.setToolTipText("");
+
+        GrupoButton.add(jRSport);
+        jRSport.setText("Sport");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -110,28 +118,31 @@ public class Escolhendo_Signo extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRAries)
-                            .addComponent(jRTouro)
-                            .addComponent(jRGemeos)
-                            .addComponent(jRCancer))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRLeoes)
-                            .addComponent(jRVirgem)
-                            .addComponent(jRLibra)
-                            .addComponent(jREscorpiao))
-                        .addGap(61, 61, 61)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRSagitario)
-                            .addComponent(jRCapricornio)
-                            .addComponent(jRAquario)
-                            .addComponent(jRPeixes)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jBVeja, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBSair, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jRAries)
+                    .addComponent(jRTouro)
+                    .addComponent(jRGemeos)
+                    .addComponent(jRCancer)
+                    .addComponent(jRSantos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRVasco)
+                    .addComponent(jRLeoes)
+                    .addComponent(jRVirgem)
+                    .addComponent(jRLibra)
+                    .addComponent(jREscorpiao))
+                .addGap(61, 61, 61)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRSagitario)
+                    .addComponent(jRCapricornio)
+                    .addComponent(jRAquario)
+                    .addComponent(jRPeixes)
+                    .addComponent(jRSport))
+                .addGap(8, 8, 8))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jBVeja, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jBSair, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -163,19 +174,23 @@ public class Escolhendo_Signo extends javax.swing.JFrame {
                         .addComponent(jRLibra)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jREscorpiao)))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jBSair, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBVeja, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jRVasco)
+                    .addComponent(jRSantos)
+                    .addComponent(jRSport))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBVeja, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBSair, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSairActionPerformed
-      System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_jBSairActionPerformed
 
     private void jBVejaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVejaActionPerformed
@@ -234,26 +249,26 @@ public class Escolhendo_Signo extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Escolhendo_Signo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Times.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Escolhendo_Signo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Times.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Escolhendo_Signo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Times.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Escolhendo_Signo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Times.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Escolhendo_Signo().setVisible(true);
+                new Times().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup jBGGrupoOpcoes;
+    private javax.swing.ButtonGroup GrupoButton;
     private javax.swing.JButton jBSair;
     private javax.swing.JButton jBVeja;
     private javax.swing.JRadioButton jRAquario;
@@ -266,7 +281,10 @@ public class Escolhendo_Signo extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRLibra;
     private javax.swing.JRadioButton jRPeixes;
     private javax.swing.JRadioButton jRSagitario;
+    private javax.swing.JRadioButton jRSantos;
+    private javax.swing.JRadioButton jRSport;
     private javax.swing.JRadioButton jRTouro;
+    private javax.swing.JRadioButton jRVasco;
     private javax.swing.JRadioButton jRVirgem;
     // End of variables declaration//GEN-END:variables
 }
