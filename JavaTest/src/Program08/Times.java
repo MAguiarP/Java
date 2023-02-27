@@ -221,16 +221,16 @@ public class Times extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "17 de Novembro de 1895");
         }
         else if(jRCoritiba.isSelected()){
-            JOptionPane.showMessageDialog(null, "Seu jeito expansivo não passa despercebido.");
+            JOptionPane.showMessageDialog(null, "12 de Outubro de 1909");
         }
         else if(jRInter.isSelected()){
-            JOptionPane.showMessageDialog(null, "Você não foge de uma boa discussão e adora uma balada.");
+            JOptionPane.showMessageDialog(null, "04 de Abril de 1909");
         }
         else if(jRGre.isSelected()){
-            JOptionPane.showMessageDialog(null, "Seu signo é chamado de futurista.");
+            JOptionPane.showMessageDialog(null, "15 de Setembro de 1903");
         }
         else if(jRCru.isSelected()){
-            JOptionPane.showMessageDialog(null, "Tem desejo de fazer algo grandioso pelo mundo.");
+            JOptionPane.showMessageDialog(null, "02 de Janeiro de 1921");
         }
     }//GEN-LAST:event_jBVejaActionPerformed
 
