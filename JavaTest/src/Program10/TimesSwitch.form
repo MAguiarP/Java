@@ -97,6 +97,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Veja a data de funda&#xe7;&#xe3;o de seu time."/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCBRespostaActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
