@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Program09;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author mathe
@@ -27,21 +27,86 @@ public class SignoSwitch extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jCBSignos = new javax.swing.JComboBox<>();
+        jBResposta = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        jLabel1.setText("Signos - Escolha o seu :");
+
+        jCBSignos.setEditable(true);
+        jCBSignos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Áries", "Touro", "Gêmeos", "Câncer", "Leão", "Virgem", "Libra", "Escorpião", "Sagitário", "Capricórnio", "Aquário", " Peixes" }));
+
+        jBResposta.setText("Veja o que diz seu Signo");
+        jBResposta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBRespostaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCBSignos, 0, 182, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(119, 119, 119)
+                .addComponent(jBResposta)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jCBSignos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jBResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBRespostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBRespostaActionPerformed
+        switch(jCBSignos.getSelectedIndex()){
+            case 0:
+                JOptionPane.showMessageDialog(null, "O Primeiro signo do zodíaco é também pioneiro em tudo, está sempre tomando a frente das situações."); break;
+            case 1:
+                JOptionPane.showMessageDialog(null, "Por ser do elemento terra, gosta de ter o controle das situações em suas mãos."); break;
+            case 2:
+                JOptionPane.showMessageDialog(null, "É inteligente dinâmica, vibrante, sempre em busca de novos desafios."); break; 
+            case 3:
+                JOptionPane.showMessageDialog(null, "Tem uma super intuição, que a guia nos momentos-chave do destino."); break;
+            case 4:
+                JOptionPane.showMessageDialog(null, "Tem muitos talentos, adora balada, cinema, música e ama animais de estimação."); break;    
+            case 5:
+                JOptionPane.showMessageDialog(null, "Têm muito talento para a escrita, e têm um jeitinho crítico, que pode ajudá-las na profissão."); break;    
+            case 6:
+                JOptionPane.showMessageDialog(null, "Você, mais que ninguém, sabe o valor das outras pessoas, das boas amizades, dos relacionamentos afetivos."); break;    
+            case 7:
+                JOptionPane.showMessageDialog(null, "Sua persistência e teimosia podem ultrapassar muitas barreiras."); break;    
+            case 8:
+                JOptionPane.showMessageDialog(null, "Seu jeito expansivo não passa despercebido."); break;    
+            case 9:
+                JOptionPane.showMessageDialog(null, "Você não foge de uma boa discussão e adora uma balada."); break;    
+            case 10:
+                JOptionPane.showMessageDialog(null, "Seu signo é chamado de futurista."); break;    
+            case 11:
+                JOptionPane.showMessageDialog(null, "Tem desejo de fazer algo grandioso pelo mundo."); break;    
+            default:
+                JOptionPane.showMessageDialog(null, "Esse não é um signo válido."); break;
+                
+        }
+    }//GEN-LAST:event_jBRespostaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +144,8 @@ public class SignoSwitch extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBResposta;
+    private javax.swing.JComboBox<String> jCBSignos;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
