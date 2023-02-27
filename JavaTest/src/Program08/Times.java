@@ -176,8 +176,8 @@ public class Times extends javax.swing.JFrame {
                         .addComponent(jRFlu)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jRFla)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRVasco)
                     .addComponent(jRSantos)
                     .addComponent(jRSport))
@@ -185,7 +185,7 @@ public class Times extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBVeja, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBSair, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         pack();
@@ -231,6 +231,15 @@ public class Times extends javax.swing.JFrame {
         }
         else if(jRCru.isSelected()){
             JOptionPane.showMessageDialog(null, "02 de Janeiro de 1921");
+        }
+        else if(jRSantos.isSelected()){
+            JOptionPane.showMessageDialog(null, "14 de Abril de 1912");
+        }
+        else if(jRVasco.isSelected()){
+            JOptionPane.showMessageDialog(null, "21 de Agosto de 1894");
+        }
+        else if(jRSport.isSelected()){
+            JOptionPane.showMessageDialog(null, "13 de Maio de 1905");
         }
     }//GEN-LAST:event_jBVejaActionPerformed
 

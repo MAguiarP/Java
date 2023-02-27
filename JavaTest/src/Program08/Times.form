@@ -96,18 +96,18 @@
                       <Component id="jRFla" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jRVasco" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRSantos" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRSport" alignment="0" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jRVasco" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRSantos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRSport" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jBVeja" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   <Component id="jBSair" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="46" max="32767" attributes="0"/>
+              <EmptySpace pref="38" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
