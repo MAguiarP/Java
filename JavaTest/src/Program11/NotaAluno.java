@@ -185,16 +185,16 @@ public class NotaAluno extends javax.swing.JFrame {
         double resultado = total;
         
       if (total <=5){
-          JOptionPane.showMessageDialog(null, jTNome.getText() + ", Reprovado!" + "Sua média é:" + resultado );
+          JOptionPane.showMessageDialog(null, jTNome.getText() + ", Reprovado! " + ", Sua média é: " + resultado );
       }
       else if((total > 5) && (total <=7)){
-        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Aprovado com média Boa!" + "Sua média é:" + resultado );
+        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Aprovado com média Boa! " + ", Sua média é: " + resultado );
       }
       else if ((total > 7) && (total <=9)){
-        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Aprovado com média Muito Boa!" + "Sua média é:" + resultado );  
+        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Aprovado com média Muito Boa! " + ", Sua média é: " + resultado );  
       }
         else if (total >9){
-        JOptionPane.showMessageDialog(null, jTNome.getText() + " Aprovado com média Excelente!!" + "Sua média é:" + resultado );
+        JOptionPane.showMessageDialog(null, jTNome.getText() + " Aprovado com média Excelente!! " + ", Sua média é: " + resultado );
      
     }//GEN-LAST:event_jBMediaActionPerformed
     }
