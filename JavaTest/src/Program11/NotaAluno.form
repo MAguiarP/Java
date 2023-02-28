@@ -145,6 +145,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="M&#xe9;dia"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBMediaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jBLimpar">
       <Properties>

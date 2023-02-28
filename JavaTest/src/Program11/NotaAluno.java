@@ -5,6 +5,8 @@
  */
 package Program11;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mathe
@@ -57,6 +59,11 @@ public class NotaAluno extends javax.swing.JFrame {
         jLabel5.setText("Nota 4° Bimestre :");
 
         jBMedia.setText("Média");
+        jBMedia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBMediaActionPerformed(evt);
+            }
+        });
 
         jBLimpar.setText("Limpar");
         jBLimpar.addActionListener(new java.awt.event.ActionListener() {
@@ -162,6 +169,35 @@ public class NotaAluno extends javax.swing.JFrame {
          jTNome.requestFocus();
     }//GEN-LAST:event_jBLimparActionPerformed
 
+    private void jBMediaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMediaActionPerformed
+        int Media1;
+        int Media2;
+        int Media3;
+        int Media4;
+               
+        Media1 = Integer.parseInt(jTNota1.getText());
+        Media2 = Integer.parseInt(jTNota2.getText());
+        Media3 = Integer.parseInt(jTNota3.getText());
+        Media4 = Integer.parseInt(jTNota4.getText());
+        
+        
+        double total = (Media1 + Media2 + Media3 + Media4)/4 ; 
+        
+        
+      if (total <=5){
+          JOptionPane.showMessageDialog(null, jTNome.getText() + " Reprovado!");
+      }
+      else if((total > 5) && (total <=7)){
+        JOptionPane.showMessageDialog(null, jTNome.getText() + " Aprovado com média Boa!");
+      }
+      else if ((total > 7) && (total <=9)){
+        JOptionPane.showMessageDialog(null, jTNome.getText() + " Aprovado com média Muito Boa!");  
+      }
+        else if (total >9){
+        JOptionPane.showMessageDialog(null, jTNome.getText() + " Aprovado com média Excelente!!");
+     
+    }//GEN-LAST:event_jBMediaActionPerformed
+    }
     /**
      * @param args the command line arguments
      */
