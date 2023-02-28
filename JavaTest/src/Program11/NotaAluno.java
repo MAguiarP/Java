@@ -185,13 +185,13 @@ public class NotaAluno extends javax.swing.JFrame {
         
         
       if (total <=5){
-          JOptionPane.showMessageDialog(null, jTNome.getText() + " Reprovado!");
+          JOptionPane.showMessageDialog(null, jTNome.getText() + ", Reprovado!");
       }
       else if((total > 5) && (total <=7)){
-        JOptionPane.showMessageDialog(null, jTNome.getText() + " Aprovado com média Boa!");
+        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Aprovado com média Boa!");
       }
       else if ((total > 7) && (total <=9)){
-        JOptionPane.showMessageDialog(null, jTNome.getText() + " Aprovado com média Muito Boa!");  
+        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Aprovado com média Muito Boa!");  
       }
         else if (total >9){
         JOptionPane.showMessageDialog(null, jTNome.getText() + " Aprovado com média Excelente!!");
