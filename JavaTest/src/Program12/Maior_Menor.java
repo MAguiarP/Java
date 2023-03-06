@@ -170,35 +170,34 @@ public class Maior_Menor extends javax.swing.JFrame {
     }//GEN-LAST:event_jBLimparActionPerformed
 
     private void jBCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCalcularActionPerformed
-        int Num1;
-        int Num2;
-        int Num3;
-        int total = 0;
-        Num1 = Integer.parseInt(jTPrimeiroNum.getText());
-        Num2 = Integer.parseInt(jTSegundoNum.getText());
-        Num3 = Integer.parseInt(jTTerceiroNum.getText());
-      
-                
-        total = Num1 =  Num2 = Num3;
-        
-        if(jRMaiorNum.isSelected()){
-            if(total >=50 ) {
-                JOptionPane.showMessageDialog(null,total + "É o menor Número");
-            }else if(total >=50){
-                JOptionPane.showMessageDialog(null,total + "É o Maior Número");
-            }
-         
-      }
-            if(jRMenorNum.isSelected()){
-            if(total <10 ) {
-                JOptionPane.showMessageDialog(null,total + "É o menor Número");
-            
-            }else {
-                JOptionPane.showMessageDialog(null,total + "É o diferente Número");
-            }
-         
-      }
-      
+    double numero1;
+    double numero2;
+    double numero3;
+    double resultado;
+    
+    numero1 = Double.parseDouble(jTPrimeiroNum.getText());
+    numero2 = Double.parseDouble(jTSegundoNum.getText());
+    numero3 = Double.parseDouble(jTTerceiroNum.getText());
+    if(jRMaiorNum.isSelected()){
+        if(numero1 > numero2 && numero1 > numero3){
+            JOptionPane.showMessageDialog(null, numero1 + " é o maior número!!!");}
+        else if(numero2 > numero1 && numero2 > numero3){
+            JOptionPane.showMessageDialog(null, numero2 + " é o maior número!!!");}
+        else if(numero3 > numero1 && numero3 > numero2){
+            JOptionPane.showMessageDialog(null, numero3 + " é o maior número!!!");}
+    }
+    else if(jRMenorNum.isSelected()){
+        if(numero1 < numero2 && numero1 < numero3){
+            JOptionPane.showMessageDialog(null, numero1 + " é o menor número!!!");}
+        else if(numero2 < numero1 && numero2 < numero3){
+            JOptionPane.showMessageDialog(null, numero2 + " é o menor número!!!");}
+        else if(numero3 < numero1 && numero3 < numero2){
+            JOptionPane.showMessageDialog(null, numero3 + " é o menor número!!!");}
+    }
+    else{
+        JOptionPane.showMessageDialog(null,"Selecione a opção desejada.");
+    }
+
     }//GEN-LAST:event_jBCalcularActionPerformed
 
     /**
