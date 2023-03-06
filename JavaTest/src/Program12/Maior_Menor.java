@@ -173,13 +173,12 @@ public class Maior_Menor extends javax.swing.JFrame {
         int Num1;
         int Num2;
         int Num3;
-        
+        int total = 0;
         Num1 = Integer.parseInt(jTPrimeiroNum.getText());
         Num2 = Integer.parseInt(jTSegundoNum.getText());
         Num3 = Integer.parseInt(jTTerceiroNum.getText());
       
-        double total;
-        
+                
         total = Num1 =  Num2 = Num3;
         
         if(jRMaiorNum.isSelected()){
@@ -194,7 +193,7 @@ public class Maior_Menor extends javax.swing.JFrame {
             if(total <10 ) {
                 JOptionPane.showMessageDialog(null,total + "É o menor Número");
             
-            }else{
+            }else {
                 JOptionPane.showMessageDialog(null,total + "É o diferente Número");
             }
          
