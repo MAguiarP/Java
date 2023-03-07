@@ -142,7 +142,8 @@ public class Aprovado_Reprovado extends javax.swing.JFrame {
        Media2 = Integer.parseInt(jTNota2.getText());
        
        double total = (Media1 + Media2 )/2 ; 
-        double resultado = total;
+       double resultado = total;
+       
         
       if (total <6){
           JOptionPane.showMessageDialog(null, "Reprovado! " + ", Sua média é: " + resultado );
