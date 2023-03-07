@@ -22,17 +22,19 @@
  * THE SOFTWARE.
  */
 package Program14;
+import javax.swing.DefaultListModel;
 
 /**
  *
  * @author mathe
  */
-public class Tabuada_For extends javax.swing.JFrame {
+public class For_Tabuada extends javax.swing.JFrame {
+    private DefaultListModel lista =  new DefaultListModel();
 
     /**
-     * Creates new form Tabuada_For
+     * Creates new form For_Tabuada
      */
-    public Tabuada_For() {
+    public For_Tabuada() {
         initComponents();
     }
 
@@ -51,13 +53,17 @@ public class Tabuada_For extends javax.swing.JFrame {
         jBCalcular = new javax.swing.JButton();
         jBLimpar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jLResultado = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tabuada ");
+        setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("TABUADA");
+        jLabel1.setToolTipText("");
 
+        jLabel2.setFont(new java.awt.Font("Arial", 3, 12)); // NOI18N
         jLabel2.setText("Digite o Número :");
 
         jBCalcular.setText("Calcular");
@@ -74,32 +80,29 @@ public class Tabuada_For extends javax.swing.JFrame {
             }
         });
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { " " };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(jList1);
+        jLResultado.setForeground(new java.awt.Color(51, 51, 255));
+        jScrollPane1.setViewportView(jLResultado);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(83, 83, 83))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jBCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBLimpar))
-                    .addComponent(jScrollPane1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jTNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTNumero))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jBCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBLimpar)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -116,19 +119,30 @@ public class Tabuada_For extends javax.swing.JFrame {
                     .addComponent(jBCalcular)
                     .addComponent(jBLimpar))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimparActionPerformed
-        // TODO add your handling code here:
+        jTNumero.setText(null);
+        lista.clear();
+        jTNumero.requestFocus();
     }//GEN-LAST:event_jBLimparActionPerformed
 
     private void jBCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCalcularActionPerformed
-        // TODO add your handling code here:
+        int numero = Integer.parseInt(jTNumero.getText());
+        int total;
+        
+        for (int cont = 1; cont <= 10; cont++){
+            total = cont * numero;
+            lista.addElement(cont + " X " + numero + " = " + total);
+        }
+        jLResultado.setModel(lista);
+        
     }//GEN-LAST:event_jBCalcularActionPerformed
 
     /**
@@ -148,20 +162,20 @@ public class Tabuada_For extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Tabuada_For.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(For_Tabuada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Tabuada_For.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(For_Tabuada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Tabuada_For.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(For_Tabuada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Tabuada_For.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(For_Tabuada.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Tabuada_For().setVisible(true);
+                new For_Tabuada().setVisible(true);
             }
         });
     }
@@ -169,9 +183,9 @@ public class Tabuada_For extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBCalcular;
     private javax.swing.JButton jBLimpar;
+    private javax.swing.JList<String> jLResultado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTNumero;
     // End of variables declaration//GEN-END:variables
