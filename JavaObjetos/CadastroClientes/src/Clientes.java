@@ -36,6 +36,21 @@ public class Clientes {
         this.telefone = sTelefone;
     }
     
+    //método que permite recuperar o nome do cliente.
+    public String retorna_nome(){
+        return(nome);
+    }
     
+    public String retorna_endereco(){
+        return(endereco);
+    }
     
+    public String retorna_telefone(){
+        return(telefone);
+    }
+    
+    public String retorna_email(){
+        return(email);
+    }
+   
 }
