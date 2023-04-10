@@ -7,7 +7,7 @@
 public class Consulta_Cadastro extends javax.swing.JFrame {
 
     //Cria um objeto da classe Pessoa
-    Cliente ObjClientes = new Clientes();
+    Clientes ObjClientes = new Clientes();
     /**
      * Creates new form Consulta_Cadastro
      */
@@ -52,8 +52,18 @@ public class Consulta_Cadastro extends javax.swing.JFrame {
         jLabel4.setText("Telefone");
 
         jBCadastrar.setText("Cadastrar");
+        jBCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCadastrarActionPerformed(evt);
+            }
+        });
 
         jBConsultar.setText("Consultar");
+        jBConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBConsultarActionPerformed(evt);
+            }
+        });
 
         jBSair.setText("Sair");
 
@@ -65,25 +75,26 @@ public class Consulta_Cadastro extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTNome)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
-                        .addComponent(jBCadastrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jBConsultar)
-                        .addGap(34, 34, 34)
-                        .addComponent(jBSair))
                     .addComponent(jTEndereco)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jTEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jBCadastrar)
+                                .addGap(48, 48, 48)
+                                .addComponent(jBConsultar))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel1)
+                                .addComponent(jLabel3)
+                                .addComponent(jLabel2)
+                                .addComponent(jTEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addGap(8, 8, 8)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4))
+                                .addGap(8, 8, 8))
+                            .addComponent(jBSair, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -116,6 +127,37 @@ public class Consulta_Cadastro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
+     //Utiliza o método setNome atribuição dos dados os seus respectivos atributos
+     
+     ObjClientes.setnome(jTNome.getText());
+     ObjClientes.setendereco(jTEndereco.getText());
+     ObjClientes.setEmail(jTEmail.getText());
+     ObjClientes.setTelefone(jTTelefone.getText());
+     
+     jTNome.setText(null);
+     jTEndereco.setText(null);
+     jTEmail.setText(null);
+     jTTelefone.setText(null);
+     jTNome.requestFocus();
+            
+    }//GEN-LAST:event_jBCadastrarActionPerformed
+
+    private void jBConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConsultarActionPerformed
+       //Cria variávies pra receber os dados do Cliente
+        String nomeCliente;
+        String enderecoCliente;
+        String emailCliente;
+        String telefoneCliente;
+
+        //Atribuindo dados do cliente as suas respectivas variáveis.
+        nomeCliente = ObjClientes.retorna_nome();
+        enderecoCliente = ObjClientes.retorna_endereco();
+        emailCliente = ObjClientes.retorna_email();
+        telefoneCliente = ObjClientes.retorna_telefone();
+    }//GEN-LAST:event_jBConsultarActionPerformed
+
+       
     /**
      * @param args the command line arguments
      */
