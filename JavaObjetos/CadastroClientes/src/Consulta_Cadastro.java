@@ -1,4 +1,7 @@
 
+import javax.swing.JOptionPane;
+
+
 
 /**
  *
@@ -66,6 +69,11 @@ public class Consulta_Cadastro extends javax.swing.JFrame {
         });
 
         jBSair.setText("Sair");
+        jBSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSairActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -155,7 +163,14 @@ public class Consulta_Cadastro extends javax.swing.JFrame {
         enderecoCliente = ObjClientes.retorna_endereco();
         emailCliente = ObjClientes.retorna_email();
         telefoneCliente = ObjClientes.retorna_telefone();
+        
+        //Mostra os dados obtidos em um JOPtionPane
+        JOptionPane.showMessageDialog(null, "Nome do Cliente:" +nomeCliente + " - O endereço é : " + enderecoCliente + " - Seu e-email é: " + emailCliente + " - O tefelefone é: " + telefoneCliente);
     }//GEN-LAST:event_jBConsultarActionPerformed
+
+    private void jBSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jBSairActionPerformed
 
        
     /**
