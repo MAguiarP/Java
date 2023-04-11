@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author mathe
@@ -64,6 +64,11 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JFrame {
         });
 
         jBConsultar.setText("Consultar");
+        jBConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBConsultarActionPerformed(evt);
+            }
+        });
 
         jBSair.setText("Sair");
 
@@ -154,7 +159,36 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JFrame {
        ObjPessoaFisica.setTelefone(jTTelefone.getText());
        ObjPessoaFisica.setcpf(jTCpf.getText());
        ObjPessoaFisica.setrg(jTRg.getText());
+       
+       //limpa os campos do formulário
+       jTNome.setText(null);
+       jTEndereço.setText(null);
+       jTEmail.setText(null);
+       jTTelefone.setText(null);
+       jTCpf.setText(null);
+       jTRg.setText(null);
+       jTNome.requestFocus();
     }//GEN-LAST:event_jBCadastrarActionPerformed
+
+    private void jBConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConsultarActionPerformed
+        String nomeCliente;
+        String enderecoCliente;
+        String emailCliente;
+        String telefoneCliente;
+        String cpfCliente;
+        String rgCliente;
+        
+        //atribui os dados dos clientes as suas respectivas variáveis
+        nomeCliente = ObjPessoaFisica.retorna_nome();
+        enderecoCliente = ObjPessoaFisica.retorna_endereco();
+        emailCliente = ObjPessoaFisica.retorna_email();
+        telefoneCliente = ObjPessoaFisica.retorna_telefone();
+        cpfCliente = ObjPessoaFisica.retorna_cpf();
+        rgCliente = ObjPessoaFisica.retorna_rg();
+        
+        //mostra os dados obtidos em um JOptionPane
+        JOptionPane.showMessageDialog(null, " Nome : " + nomeCliente + " Endereço : " + enderecoCliente + " Email : " + emailCliente + " Telefone : " + telefoneCliente + " CPF : " + cpfCliente + " RG : " + rgCliente);
+    }//GEN-LAST:event_jBConsultarActionPerformed
 
     /**
      * @param args the command line arguments
