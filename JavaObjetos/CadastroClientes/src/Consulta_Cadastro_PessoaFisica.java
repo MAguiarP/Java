@@ -9,10 +9,8 @@
  * @author mathe
  */
 public class Consulta_Cadastro_PessoaFisica extends javax.swing.JFrame {
-
-    /**
-     * Creates new form NewJFrame
-     */
+    // instanciando a classe cliente_pessoafisica(criando em objeto)
+    Clientes_PessoaFisica ObjPessoaFisica = new Clientes_PessoaFisica();
     public Consulta_Cadastro_PessoaFisica() {
         initComponents();
     }
@@ -26,12 +24,12 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTRG = new javax.swing.JTextField();
+        jTRg = new javax.swing.JTextField();
         jTTelefone = new javax.swing.JTextField();
-        jTCPF = new javax.swing.JTextField();
+        jTCpf = new javax.swing.JTextField();
         jTEmail = new javax.swing.JTextField();
         jTEndereço = new javax.swing.JTextField();
-        jTNone = new javax.swing.JTextField();
+        jTNome = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -59,6 +57,11 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JFrame {
         jLabel6.setText("RG");
 
         jBCadastrar.setText("Cadastrar");
+        jBCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCadastrarActionPerformed(evt);
+            }
+        });
 
         jBConsultar.setText("Consultar");
 
@@ -84,9 +87,9 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
                         .addComponent(jBSair))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTRG))
+                        .addComponent(jTRg))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -98,7 +101,7 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JFrame {
                             .addComponent(jLabel5)
                             .addComponent(jTTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jTEndereço)
-                    .addComponent(jTNone)
+                    .addComponent(jTNome)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -112,7 +115,7 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTNone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -131,8 +134,8 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JFrame {
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTRG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTRg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBCadastrar)
@@ -143,6 +146,15 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
+       ObjPessoaFisica.setnome(jTNome.getText());
+       ObjPessoaFisica.setendereco(jTEndereço.getText());
+       ObjPessoaFisica.setEmail(jTEmail.getText());
+       ObjPessoaFisica.setTelefone(jTTelefone.getText());
+       ObjPessoaFisica.setcpf(jTCpf.getText());
+       ObjPessoaFisica.setrg(jTRg.getText());
+    }//GEN-LAST:event_jBCadastrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,11 +202,11 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTCPF;
+    private javax.swing.JTextField jTCpf;
     private javax.swing.JTextField jTEmail;
     private javax.swing.JTextField jTEndereço;
-    private javax.swing.JTextField jTNone;
-    private javax.swing.JTextField jTRG;
+    private javax.swing.JTextField jTNome;
+    private javax.swing.JTextField jTRg;
     private javax.swing.JTextField jTTelefone;
     // End of variables declaration//GEN-END:variables
 }
