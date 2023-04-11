@@ -8,10 +8,10 @@
  *
  * @author mathe
  */
-public class Consulta_Cadastro_PessoaFisica extends javax.swing.JPanel {
+public class Consulta_Cadastro_PessoaFisica extends javax.swing.JFrame {
 
     /**
-     * Creates new form Consulta_Cadastro_PessoaFisica
+     * Creates new form NewJFrame
      */
     public Consulta_Cadastro_PessoaFisica() {
         initComponents();
@@ -26,6 +26,12 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTRG = new javax.swing.JTextField();
+        jTTelefone = new javax.swing.JTextField();
+        jTCPF = new javax.swing.JTextField();
+        jTEmail = new javax.swing.JTextField();
+        jTEndereço = new javax.swing.JTextField();
+        jTNone = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -35,14 +41,9 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JPanel {
         jBCadastrar = new javax.swing.JButton();
         jBConsultar = new javax.swing.JButton();
         jBSair = new javax.swing.JButton();
-        jTRG = new javax.swing.JTextField();
-        jTTelefone = new javax.swing.JTextField();
-        jTCPF = new javax.swing.JTextField();
-        jTEmail = new javax.swing.JTextField();
-        jTEndereço = new javax.swing.JTextField();
-        jTNone = new javax.swing.JTextField();
 
-        setName("Cadastro"); // NOI18N
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cadastro de Clientes - Pessoa Física");
 
         jLabel1.setText("Nome");
 
@@ -63,8 +64,8 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JPanel {
 
         jBSair.setText("Sair");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -80,7 +81,7 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JPanel {
                                 .addComponent(jLabel4)
                                 .addGap(149, 149, 149)
                                 .addComponent(jLabel6)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
                         .addComponent(jBSair))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jTCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -139,8 +140,45 @@ public class Consulta_Cadastro_PessoaFisica extends javax.swing.JPanel {
                     .addComponent(jBSair))
                 .addContainerGap())
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Consulta_Cadastro_PessoaFisica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Consulta_Cadastro_PessoaFisica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Consulta_Cadastro_PessoaFisica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Consulta_Cadastro_PessoaFisica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Consulta_Cadastro_PessoaFisica().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBCadastrar;
