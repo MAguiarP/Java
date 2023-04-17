@@ -9,8 +9,8 @@
  * @author mathe
  */
 public class Clientes_PessoaFisica extends Clientes{
-    //Atributos criados ppara nome, endereço, email e telefone.
-    String cpf , rg;
+      
+     String cpf , rg;
     
     //métodos que permitem atribuir dados aos atributos
     public void setcpf(String scpf){
