@@ -68,8 +68,18 @@ public class Consulta_Cadastro_PessoaJuridica extends javax.swing.JFrame {
         });
 
         jBConsulta.setText("Consultar");
+        jBConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBConsultaActionPerformed(evt);
+            }
+        });
 
         jBSair.setText("Sair");
+        jBSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSairActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -82,7 +92,7 @@ public class Consulta_Cadastro_PessoaJuridica extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(345, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -91,8 +101,8 @@ public class Consulta_Cadastro_PessoaJuridica extends javax.swing.JFrame {
                                 .addComponent(jBConsulta)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 158, Short.MAX_VALUE)
                                 .addComponent(jBSair))
-                            .addComponent(jTEndereco, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTNome)
+                            .addComponent(jTEndereco, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE)
+                            .addComponent(jTNome, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jTEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
@@ -102,18 +112,18 @@ public class Consulta_Cadastro_PessoaJuridica extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(20, 20, 20)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jTInscricaoEstadual)
+                                            .addComponent(jTInscricaoEstadual, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel5)
-                                                .addGap(0, 0, Short.MAX_VALUE))))
+                                                .addGap(0, 95, Short.MAX_VALUE))))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(21, 21, 21)
                                         .addComponent(jTTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE)))))
+                                        .addGap(0, 8, Short.MAX_VALUE)))))
                         .addGap(15, 15, 15))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
                         .addComponent(jLabel4)
                         .addGap(154, 154, 154))))
         );
@@ -161,8 +171,8 @@ public class Consulta_Cadastro_PessoaJuridica extends javax.swing.JFrame {
        ObjPessoaJuridica.setendereco(jTEndereco.getText());
        ObjPessoaJuridica.setEmail(jTEmail.getText());
        ObjPessoaJuridica.setTelefone(jTTelefone.getText());
-       ObjPessoaJuridica.setcpf(jTCnpj.getText());
-       ObjPessoaJuridica.setrg(jTInscricaoEstadual.getText());
+       ObjPessoaJuridica.setCnpj(jTCnpj.getText());
+       ObjPessoaJuridica.setIE(jTInscricaoEstadual.getText());
        
        //limpa os campos do formulário
        jTNome.setText(null);
@@ -174,6 +184,32 @@ public class Consulta_Cadastro_PessoaJuridica extends javax.swing.JFrame {
        jTNome.requestFocus();
     }       
     }//GEN-LAST:event_jBCadastrarActionPerformed
+
+private void jBConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConsultaActionPerformed
+    {
+        String nomeCliente;
+        String enderecoCliente;
+        String emailCliente;
+        String telefoneCliente;
+        String cnpjCliente;
+        String IECliente;
+        
+        //atribui os dados dos clientes as suas respectivas variáveis
+        nomeCliente = ObjPessoaJuridica.retorna_nome();
+        enderecoCliente = ObjPessoaJuridica.retorna_endereco();
+        emailCliente = ObjPessoaJuridica.retorna_email();
+        telefoneCliente = ObjPessoaJuridica.retorna_telefone();
+        cnpjCliente = ObjPessoaJuridica.retorna_cnpj();
+        IECliente = ObjPessoaJuridica.retorna_IE();
+        
+        //mostra os dados obtidos em um JOptionPane
+        JOptionPane.showMessageDialog(null, " Nome : " + nomeCliente + " Endereço : " + enderecoCliente + " Email : " + emailCliente + " Telefone : " + telefoneCliente + " CNPJ : " + cnpjCliente + " Inscrição Estadual : " + IECliente);
+    }   
+}//GEN-LAST:event_jBConsultaActionPerformed
+
+private void jBSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSairActionPerformed
+    System.exit(0);
+}//GEN-LAST:event_jBSairActionPerformed
 
     /**
      * @param args the command line arguments

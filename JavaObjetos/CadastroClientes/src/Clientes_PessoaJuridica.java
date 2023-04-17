@@ -10,31 +10,24 @@
  */
 public class Clientes_PessoaJuridica extends Clientes {
    //Atributos criados ppara nome, endereço, email e telefone.
-    String cpf , cnpj ,incricraoestadual  ;
+    String cnpj ,IE ;
     
     //métodos que permitem atribuir dados aos atributos
-    public void setcpf(String scpf){
-        this.cpf = scpf;
-    }
-    
-     public void setrg(String scnpj){
-        this.cnpj = scnpj;
+     public void setCnpj(String sCnpj){
+        this.cnpj = sCnpj;
     }
         
-     public void setincricaoestadual(String sincricaoestadual){
-        this.incricraoestadual = sincricaoestadual;
+     public void setIE(String IE){
+        this.IE = IE;
     }
     //método que permite recuperar o conteúdo dos atributos
-     public String retorna_cpf(){
-         return cpf;
-     }
-     
+ 
       public String retorna_cnpj(){
          return cnpj;
      }
       
-     public String retorna_incricaoestadual(){
-         return incricraoestadual;
+     public String retorna_IE(){
+         return IE;
      }
 }
 
