@@ -244,36 +244,36 @@ private void jBCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
        
     if(jRGraduacao.isSelected()){  
       if (total <=4){
-          JOptionPane.showMessageDialog(null, jTNome.getText() + ", Reprovado! " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + jTMatricula.getText());
+          JOptionPane.showMessageDialog(null, jTNome.getText() + ", Reprovado! " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + matricula );
       }
       else if((total > 5) && (total <=7)){
-        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Recuperação " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + jTMatricula.getText());
+        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Recuperação " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + matricula );
       }
       else if ((total > 7) && (total <=9)){
-        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Aprovado " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + jTMatricula.getText()); 
+        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Aprovado " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + matricula ); 
       }
       
    }
     else if(jRPosGraduacao.isSelected()){  
       if (total <=3){
-          JOptionPane.showMessageDialog(null, jTNome.getText() + ", Reprovado! " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + jTMatricula.getText());
+          JOptionPane.showMessageDialog(null, jTNome.getText() + ", Reprovado! " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + matricula );
       }
       else if((total > 4) && (total <=6))
-        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Recuperação " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + jTMatricula.getText());
+        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Recuperação " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + matricula );
       
       else if ((total > 6) && (total <=9))
-        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Aprovado " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + jTMatricula.getText());  
+        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Aprovado " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + matricula );  
    }
 
     else if(jRDoutorado.isSelected()){  
       if (total <=3){
-          JOptionPane.showMessageDialog(null, jTNome.getText() + ", Reprovado! " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + jTMatricula.getText());
+          JOptionPane.showMessageDialog(null, jTNome.getText() + ", Reprovado! " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + matricula );
       }
       else if((total > 4) && (total <=6)){
-        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Recuperação " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + jTMatricula.getText());
+        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Recuperação " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + matricula );
       }
       else if ((total > 6) && (total <=9)){
-        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Aprovado " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + jTMatricula.getText()); 
+        JOptionPane.showMessageDialog(null, jTNome.getText() + ", Aprovado " + ", Sua média é: " + resultado + ", Sua Matricula Nº: " + matricula ); 
       }
    }    
 }//GEN-LAST:event_jBCalcularActionPerformed
