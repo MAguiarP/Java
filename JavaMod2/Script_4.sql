@@ -1,0 +1,27 @@
+DROP DATABASE "DBControleEstoque";
+DROP ROLE "UserControleEstoque";
+
+
+
+CREATE ROLE "UserControleEstoque" LOGIN
+  
+ENCRYPTED PASSWORD 'md557dab901752e064a0818333cec0dd54e'
+
+SUPERUSER INHERIT CREATEDB CREATEROLE REPLICATION;
+
+
+
+
+CREATE DATABASE "DBControleEstoque"
+ 
+WITH OWNER = "UserControleEstoque"
+
+ENCODING = 'UTF8'
+
+TABLESPACE = pg_default
+
+LC_COLLATE = 'Portuguese_Brazil.1252'
+
+LC_CTYPE = 'Portuguese_Brazil.1252'
+
+CONNECTION LIMIT = -1;
