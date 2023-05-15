@@ -8,6 +8,7 @@ package controledeestoque.dao;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  *
@@ -31,10 +32,34 @@ public class ProdutosDAO {
     
     public Integer buscarQuantidadeDeEstoque(int id) {
           try{
-              String sql = "Select Quantidade from produtos where id = ?"
+              String sql = "Select Quantidade from produtos where id = ?";
+              PreparedStatement pstmt = conn.prepareStatement(sql);
+              pstmt.setInt(1, id);
+              ResultSet rs = pstmt.executeQuery();
+              if (rs.next()) {
+                  return rs.getInt("quantidade");
+              }
               
-          }
-          }
+              pstmt.close();
+              return null;
+              }
+    catch(SQLException e)
+    {
+         throw new RuntimeException(e);
     }
-    
+          
+    }
+    public ResultSet buscarTodosProdutos() {
+        try{
+          String sql = "SELECT * FROM produtos";
+          PreparedStatement pstm = conn.prepareStatement(sql);
+          ResultSet rs = pstmt.executeQuery();
+          return rs;
+    }
+    catch(SQLException e)
+    {
+          throw new RuntimeException(e);
+    }
+          
+    }
 }
