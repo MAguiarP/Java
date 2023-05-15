@@ -44,7 +44,7 @@ public class ProdutoController {
     try{
         ProdutosDAO produtosDAO = new ProdutosDAO();
         Integer quantidadeDeEstoque;
-        quantidadeDeEstoque - produtosDAO.buscarQuantidadeDeEstoque(id);
+        quantidadeDeEstoque = produtosDAO.buscarQuantidadeDeEstoque(id);
     if (quantidadeDeEstoque != null){
         produtosDAO.atualizar(id, quantidadeDeEstoque - qtde);
         JOptionPane.showMessageDialog(null, "Estoque atualizado", "Sucesso", JOptionPane.OK_OPTION );
@@ -55,8 +55,8 @@ public class ProdutoController {
 
     //limparcampos();
     } catch (SQLException ex ){
-        Logger.getLogger(InserirProdutosView.class.getName()).log(Level.SEVERE, null, ex);
-        JOptionPane.showMessageDialog(null, "Código Inválido", "Operação Incorreta", JOptionPane.ERROR);
+        Logger.getLogger(BaixarProdutosView.class.getName()).log(Level.SEVERE, null, ex);
+        JOptionPane.showMessageDialog(null, "Digite valores numéricos ", "Erro", JOptionPane.ERROR);
         
     }
     
