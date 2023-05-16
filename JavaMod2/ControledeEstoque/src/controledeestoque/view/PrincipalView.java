@@ -46,8 +46,18 @@ public class PrincipalView extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         buttonInserirProdutos.setText("Inserir Produtos");
+        buttonInserirProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonInserirProdutosActionPerformed(evt);
+            }
+        });
 
         buttonBaixarProdutos.setText("Baixar Produtos");
+        buttonBaixarProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonBaixarProdutosActionPerformed(evt);
+            }
+        });
 
         buttonRelatorioDeEstoque.setText("Relatório de Estoque");
 
@@ -125,6 +135,23 @@ private void buttonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
        System.exit(0);
    }
 }//GEN-LAST:event_buttonSairActionPerformed
+
+private void buttonInserirProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonInserirProdutosActionPerformed
+        jTabbedPaneCentral.removeAll();
+        jTabbedPaneCentral.add("Inserir Produtos", new InserirProdutosView());
+        jTabbedPaneCentral.validate();
+        jTabbedPaneCentral.repaint();
+   
+        
+}//GEN-LAST:event_buttonInserirProdutosActionPerformed
+
+private void buttonBaixarProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBaixarProdutosActionPerformed
+        jTabbedPaneCentral.removeAll();
+        jTabbedPaneCentral.add("Baixar Produtos", new BaixarProdutosView());
+        jTabbedPaneCentral.validate();
+        jTabbedPaneCentral.repaint();
+   
+}//GEN-LAST:event_buttonBaixarProdutosActionPerformed
 
     /**
      * @param args the command line arguments

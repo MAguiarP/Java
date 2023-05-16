@@ -102,11 +102,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Inserir Produtos"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonInserirProdutosActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="buttonBaixarProdutos">
           <Properties>
             <Property name="text" type="java.lang.String" value="Baixar Produtos"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonBaixarProdutosActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="buttonRelatorioDeEstoque">
           <Properties>
