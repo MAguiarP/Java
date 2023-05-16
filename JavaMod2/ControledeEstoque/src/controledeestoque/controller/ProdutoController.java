@@ -5,6 +5,8 @@
 package controledeestoque.controller;
 
 import controledeestoque.dao.ProdutosDAO;
+import controledeestoque.view.BaixarProdutosView;
+import controledeestoque.view.InserirProdutosView;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import javax.swing.JOptionPane;

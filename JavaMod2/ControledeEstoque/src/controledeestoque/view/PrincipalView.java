@@ -10,6 +10,8 @@
  */
 package controledeestoque.view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mathe
@@ -50,6 +52,11 @@ public class PrincipalView extends javax.swing.JFrame {
         buttonRelatorioDeEstoque.setText("Relatório de Estoque");
 
         buttonSair.setText("Sair");
+        buttonSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonSairActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -78,7 +85,7 @@ public class PrincipalView extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24));
         jLabel1.setText("Controle de Estoque");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -112,6 +119,12 @@ public class PrincipalView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+private void buttonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSairActionPerformed
+   if (JOptionPane.showConfirmDialog(this, "Deseja Fechar?","Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+       System.exit(0);
+   }
+}//GEN-LAST:event_buttonSairActionPerformed
 
     /**
      * @param args the command line arguments

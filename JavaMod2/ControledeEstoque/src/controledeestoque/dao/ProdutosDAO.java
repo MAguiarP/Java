@@ -52,7 +52,7 @@ public class ProdutosDAO {
     public ResultSet buscarTodosProdutos() {
         try{
           String sql = "SELECT * FROM produtos";
-          PreparedStatement pstm = conn.prepareStatement(sql);
+          PreparedStatement pstmt = conn.prepareStatement(sql);
           ResultSet rs = pstmt.executeQuery();
           return rs;
     }
