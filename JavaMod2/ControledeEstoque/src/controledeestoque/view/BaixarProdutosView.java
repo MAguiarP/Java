@@ -48,7 +48,7 @@ public class BaixarProdutosView extends javax.swing.JPanel {
             }
         });
 
-        jButtonInserir.setText("Inserir");
+        jButtonInserir.setText("Baixar");
         jButtonInserir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonInserirActionPerformed(evt);
@@ -115,11 +115,10 @@ private void jButtonLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN
 }//GEN-LAST:event_jButtonLimparActionPerformed
 
 private void jButtonInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInserirActionPerformed
-    ProdutoController produtoController = new ProdutoController();
-         produtoController.Inserir((Integer.parseInt
-            (jTextFieldCodigo.getText())), Integer.parseInt
-                 (jTextFieldQuantidade.getText()));
-
+ ProdutoController produtoController = new ProdutoController();
+    produtoController.Baixar((Integer.parseInt
+            (jTextFieldCodigo.getText())),Integer.
+            parseInt(jTextFieldQuantidade.getText()));
 }//GEN-LAST:event_jButtonInserirActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
