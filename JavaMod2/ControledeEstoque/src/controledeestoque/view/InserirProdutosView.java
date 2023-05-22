@@ -10,6 +10,8 @@
  */
 package controledeestoque.view;
 
+import controledeestoque.controller.ProdutoController;
+
 /**
  *
  * @author mathe
@@ -39,7 +41,7 @@ public class InserirProdutosView extends javax.swing.JPanel {
         jTextFieldCodigo = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel1.setText("Inserir Produtos");
 
         jLabel2.setText("Código:");
@@ -47,8 +49,18 @@ public class InserirProdutosView extends javax.swing.JPanel {
         jLabel3.setText("Quantidade:");
 
         jButtonInserir.setText("Inserir");
+        jButtonInserir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonInserirActionPerformed(evt);
+            }
+        });
 
         jButtonLimpar.setText("Limpar");
+        jButtonLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLimparActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -96,6 +108,19 @@ public class InserirProdutosView extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+private void jButtonInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInserirActionPerformed
+      ProdutoController produtoController = new ProdutoController();
+         produtoController.Inserir((Integer.parseInt
+            (jTextFieldCodigo.getText())), Integer.parseInt
+                 (jTextFieldQuantidade.getText()));
+}//GEN-LAST:event_jButtonInserirActionPerformed
+
+private void jButtonLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimparActionPerformed
+  jTextFieldQuantidade.setText("");
+  jTextFieldCodigo.setText("");
+}//GEN-LAST:event_jButtonLimparActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonInserir;
     private javax.swing.JButton jButtonLimpar;

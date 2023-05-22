@@ -10,6 +10,8 @@
  */
 package controledeestoque.view;
 
+import controledeestoque.controller.ProdutoController;
+
 /**
  *
  * @author mathe
@@ -40,21 +42,30 @@ public class BaixarProdutosView extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
 
         jButtonLimpar.setText("Limpar");
+        jButtonLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLimparActionPerformed(evt);
+            }
+        });
 
         jButtonInserir.setText("Inserir");
+        jButtonInserir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonInserirActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Código:");
 
         jLabel3.setText("Quantidade:");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14));
         jLabel1.setText("Baixar Produtos");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 532, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -77,7 +88,6 @@ public class BaixarProdutosView extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 162, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
@@ -98,6 +108,20 @@ public class BaixarProdutosView extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+private void jButtonLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimparActionPerformed
+ jTextFieldQuantidade.setText("");
+  jTextFieldCodigo.setText("");
+}//GEN-LAST:event_jButtonLimparActionPerformed
+
+private void jButtonInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInserirActionPerformed
+    ProdutoController produtoController = new ProdutoController();
+         produtoController.Inserir((Integer.parseInt
+            (jTextFieldCodigo.getText())), Integer.parseInt
+                 (jTextFieldQuantidade.getText()));
+
+}//GEN-LAST:event_jButtonInserirActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonInserir;
     private javax.swing.JButton jButtonLimpar;

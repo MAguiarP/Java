@@ -9,8 +9,9 @@ import controledeestoque.view.BaixarProdutosView;
 import controledeestoque.view.InserirProdutosView;
 import java.sql.SQLException;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import org.postgresql.core.Logger;
+
 
 /**
  *
@@ -38,7 +39,7 @@ public class ProdutoController {
         JOptionPane.showMessageDialog(null, "Código Inválido", "Operação Incorreta", JOptionPane.ERROR);
         
     }
-    
+         
     }
     
      public void Baixar(int id, int qtde) {
