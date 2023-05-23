@@ -10,6 +10,12 @@
  */
 package controledeestoque.view;
 
+import controledeestoque.controller.RelatorioDeEstoque;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -61,6 +67,11 @@ public class PrincipalView extends javax.swing.JFrame {
         });
 
         buttonRelatorioDeEstoque.setText("Relatório de Estoque");
+        buttonRelatorioDeEstoque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRelatorioDeEstoqueActionPerformed(evt);
+            }
+        });
 
         buttonSair.setText("Sair");
         buttonSair.addActionListener(new java.awt.event.ActionListener() {
@@ -153,6 +164,24 @@ private void buttonBaixarProdutosActionPerformed(java.awt.event.ActionEvent evt)
         jTabbedPaneCentral.repaint();
    
 }//GEN-LAST:event_buttonBaixarProdutosActionPerformed
+
+private void buttonRelatorioDeEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRelatorioDeEstoqueActionPerformed
+    try{
+        Date data = new Date();
+        DateFormat df = new SimpleDateFormat("dd_MM_yyyy");
+        RelatorioDeEstoque relatorioEstoque = new RelatorioDeEstoque("C:\\Users\\mathe\\Documents\\GitHub\\Java\\JavaMod2\\Relatório de Estoque\\" + "Relatorio_de_Estoque" + df.format(data) + ".pdf");
+    if (relatorioEstoque.geraRelatorio()){
+        JOptionPane.showMessageDialog(this,"Relatório Gerado com Sucesso! O relatório" + " gerado se encontra em C:\\Users\\mathe\\Documents\\GitHub\\Java\\JavaMod2\\Relatório de Estoque\\","Sucesso",JOptionPane.OK_OPTION );
+    }
+    
+    else{
+        JOptionPane.showConfirmDialog(this, "Relatório não gerado!", "Erro", JOptionPane.ERROR_MESSAGE);
+    }
+    
+    }catch(Exception e)  { 
+        Logger.getLogger(PrincipalView.class.getName()).log(Level.SEVERE,  null, e);        
+    }
+}//GEN-LAST:event_buttonRelatorioDeEstoqueActionPerformed
 
     /**
      * @param args the command line arguments

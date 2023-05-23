@@ -6,13 +6,12 @@ package controledeestoque.controller;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Element;
+import com.itextpdf.text.Font;
 import com.itextpdf.text.Paragraph;
-
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import controledeestoque.dao.ProdutosDAO;
-import java.awt.Font;
 import java.io.FileOutputStream;
 import java.sql.ResultSet;
 import java.util.Date;
@@ -25,28 +24,31 @@ import java.util.Date;
 public class RelatorioDeEstoque {
     
 
-
+    private String local;
+     private PdfPTable table;
+    
 
 public RelatorioDeEstoque(String local) {
     this.local = local ;
     this.table = new PdfPTable(3);
 }
-
-
-     private String local;
-     private PdfPTable table;
-    
-            
-
-
+  
 
 public void imprimeTitulo(String linha) {
-    PdfPTable cellcodigo, cellestoque, celldescricao, celltitulo, cellbranco;
+    PdfPCell cellcodigo, cellestoque, celldescricao, celltitulo, cellbranco;
     cellbranco = new PdfPCell (new Paragraph(" "));
-    celltitulo = new PdfPCell (new Paragraph (linha, new Font(Font. FontFamily.UNDEFINED, 14, Font.BOLD)));
-    cellcodigo = new PdfPCell (new Paragraph("Código", new Font(Font.FontFamily.UNDEFINED, 12, Font.BOLD)));
-    cellestoque = new PdfPCell (new Paragraph ("Estoque", new Font(Font.FontFamily.UNDEFINED, 12, Font.BOLD)));
-    celldescricao = new PdfPCell (new Paragraph (new Paragraph("Descrição", new Font(Font.FontFamily.UNDEFINED, 12, Font.BOLD))));
+    celltitulo = new PdfPCell (new Paragraph (linha,
+            new Font(Font. FontFamily.UNDEFINED, 14,
+            Font.BOLD)));
+    cellcodigo = new PdfPCell (new Paragraph("Código",
+            new Font(Font.FontFamily.UNDEFINED, 12,
+            Font.BOLD)));
+    cellestoque = new PdfPCell (new Paragraph ("Estoque",
+            new Font(Font.FontFamily.UNDEFINED, 12,
+            Font.BOLD)));
+    celldescricao = new PdfPCell (new Paragraph (new Paragraph("Descrição",
+            new Font(Font.FontFamily.UNDEFINED,
+            12, Font.BOLD))));
             
 celltitulo.setHorizontalAlignment(Element.ALIGN_CENTER);
 celltitulo.setColspan(3);
