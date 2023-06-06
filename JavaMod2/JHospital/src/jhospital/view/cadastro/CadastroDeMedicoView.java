@@ -8,12 +8,12 @@ package jhospital.view.cadastro;
  *
  * @author mathe
  */
-public class CadastroDePacienteView extends javax.swing.JPanel {
+public class CadastroDeMedicoView extends javax.swing.JPanel {
 
     /**
-     * Creates new form CadastroDePacienteView
+     * Creates new form CadastroDeMedicoView
      */
-    public CadastroDePacienteView() {
+    public CadastroDeMedicoView() {
         initComponents();
     }
 
@@ -29,49 +29,41 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        textFieldEndereco = new javax.swing.JTextField();
+        textFieldNome = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        textFieldEmail = new javax.swing.JTextField();
+        textFieldTelefone = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        textFieldEspecialidade = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        textFieldValorDaHora = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        comboBoxPlanoDeSaude = new javax.swing.JComboBox<>();
+        textFieldHorasMensais = new javax.swing.JTextField();
         buttonSalvar = new javax.swing.JButton();
         buttonCancelar = new javax.swing.JButton();
-        textFieldNome = new javax.swing.JTextField();
-        textFieldEndereco = new javax.swing.JTextField();
-        textFieldQuarto = new javax.swing.JTextField();
-        textFieldDiasInternado = new javax.swing.JTextField();
-        textFieldDoenca = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        textFieldTelefone = new javax.swing.JTextField();
-        textFieldEmail = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setText("Cadastro de Paciente");
+        jLabel1.setText("Cadastro de Médico");
 
         jLabel2.setText("Nome Completo :");
 
         jLabel3.setText("Endereço :");
 
-        jLabel5.setText("Quarto :");
+        jLabel7.setText("Telefone :");
 
-        jLabel6.setText("Dias Internado :");
+        jLabel4.setText("Email :");
 
-        jLabel8.setText("Doença :");
+        jLabel5.setText("Especialidade :");
 
-        jLabel9.setText("Plano de Saúde :");
+        jLabel6.setText("Valor da Hora :");
 
-        comboBoxPlanoDeSaude.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sim", "Não" }));
+        jLabel8.setText("Horas Mensais :");
 
         buttonSalvar.setText("Salvar");
 
         buttonCancelar.setText("Cancelar");
-
-        textFieldQuarto.setToolTipText("");
-
-        jLabel7.setText("Telefone :");
-
-        jLabel4.setText("Email :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -81,50 +73,43 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel6))
+                                .addComponent(textFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(textFieldDiasInternado, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
-                                    .addComponent(textFieldQuarto))))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(5, 5, 5)
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textFieldDoenca))
+                                .addComponent(textFieldTelefone))
+                            .addComponent(textFieldNome)
+                            .addComponent(textFieldEndereco)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(buttonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel9)
+                                        .addComponent(textFieldEspecialidade, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(comboBoxPlanoDeSaude, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
-                                .addComponent(buttonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(jLabel8)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(textFieldHorasMensais)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(0, 56, Short.MAX_VALUE)
+                                        .addComponent(buttonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(textFieldEmail)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textFieldTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(textFieldNome)
-                            .addComponent(textFieldEndereco))))
+                                .addComponent(textFieldValorDaHora, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -149,20 +134,18 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
+                    .addComponent(textFieldEspecialidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
-                    .addComponent(textFieldQuarto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldDoenca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textFieldHorasMensais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel9)
-                    .addComponent(comboBoxPlanoDeSaude, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldDiasInternado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(114, 114, 114)
+                    .addComponent(textFieldValorDaHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(buttonSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addGap(58, 58, 58))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -170,7 +153,6 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCancelar;
     private javax.swing.JButton buttonSalvar;
-    private javax.swing.JComboBox<String> comboBoxPlanoDeSaude;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -179,13 +161,12 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField textFieldDiasInternado;
-    private javax.swing.JTextField textFieldDoenca;
     private javax.swing.JTextField textFieldEmail;
     private javax.swing.JTextField textFieldEndereco;
+    private javax.swing.JTextField textFieldEspecialidade;
+    private javax.swing.JTextField textFieldHorasMensais;
     private javax.swing.JTextField textFieldNome;
-    private javax.swing.JTextField textFieldQuarto;
     private javax.swing.JTextField textFieldTelefone;
+    private javax.swing.JTextField textFieldValorDaHora;
     // End of variables declaration//GEN-END:variables
 }
