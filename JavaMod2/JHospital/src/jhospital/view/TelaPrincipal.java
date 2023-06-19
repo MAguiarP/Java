@@ -4,6 +4,10 @@
  */
 package jhospital.view;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import javax.swing.JOptionPane;
 import jhospital.view.cadastro.CadastroDeEnfermeiroView;
 import jhospital.view.cadastro.CadastroDeMedicoView;
@@ -237,8 +241,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_menuItemConsultaMedicoActionPerformed
 
     private void menuItemSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemSobreActionPerformed
-        JOptionPane.showMessageDialog(this,"JHospital\n\nVersão 1.0\nCopyright MAguiar", "Sobre", JOptionPane.INFORMATION_MESSAGE);
-    
+        try{JOptionPane.showMessageDialog(this,"JHospital\n\nVersão 1.0\nCopyright MAguiar", "Sobre", JOptionPane.INFORMATION_MESSAGE);
+    Desktop browser = Desktop.getDesktop();
+        
+            browser.browse(new URI("https://github.com/MAguiarP"));
+        }
+        catch(IOException err){
+        }
+        catch(URISyntaxException err){
+    }    
     }//GEN-LAST:event_menuItemSobreActionPerformed
 
     private void menuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemSairActionPerformed
