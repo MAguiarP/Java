@@ -4,7 +4,15 @@
  */
 package jhospital.view;
 
+import javax.swing.JOptionPane;
+import jhospital.view.cadastro.CadastroDeEnfermeiroView;
+import jhospital.view.cadastro.CadastroDeMedicoView;
 import jhospital.view.cadastro.CadastroDePacienteView;
+import jhospital.view.cadastro.CadastroDeVisitanteView;
+import jhospital.view.consulta.ConsultaDeEnfermeiroView;
+import jhospital.view.consulta.ConsultaDeMedicoView;
+import jhospital.view.consulta.ConsultaDePacienteView;
+import jhospital.view.consulta.ConsultaDeVisitanteView;
 
 /**
  *
@@ -53,6 +61,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         menuItemSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, 0));
         menuItemSair.setText("Sair");
+        menuItemSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemSairActionPerformed(evt);
+            }
+        });
         menuArquivo.add(menuItemSair);
 
         menuPrincipal.add(menuArquivo);
@@ -81,10 +94,20 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         menuItemCadastroMedico.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, 0));
         menuItemCadastroMedico.setText("Cadastro Médico");
+        menuItemCadastroMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemCadastroMedicoActionPerformed(evt);
+            }
+        });
         menuCadastro.add(menuItemCadastroMedico);
 
         menuItemCadastroEnfermeiro.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, 0));
         menuItemCadastroEnfermeiro.setText("Cadastro Enfermeiro");
+        menuItemCadastroEnfermeiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemCadastroEnfermeiroActionPerformed(evt);
+            }
+        });
         menuCadastro.add(menuItemCadastroEnfermeiro);
 
         menuPrincipal.add(menuCadastro);
@@ -102,15 +125,30 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         menuItemConsultaEnfermeiro.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, 0));
         menuItemConsultaEnfermeiro.setText("Consulta Enfermeiro");
+        menuItemConsultaEnfermeiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemConsultaEnfermeiroActionPerformed(evt);
+            }
+        });
         menuConsulta.add(menuItemConsultaEnfermeiro);
 
         menuItemConsultaVisitante.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, 0));
         menuItemConsultaVisitante.setText("Consulta Visitante");
         menuItemConsultaVisitante.setToolTipText("");
+        menuItemConsultaVisitante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemConsultaVisitanteActionPerformed(evt);
+            }
+        });
         menuConsulta.add(menuItemConsultaVisitante);
 
         menuItemConsultaMedico.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, 0));
         menuItemConsultaMedico.setText("Consulta Médico");
+        menuItemConsultaMedico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemConsultaMedicoActionPerformed(evt);
+            }
+        });
         menuConsulta.add(menuItemConsultaMedico);
 
         menuPrincipal.add(menuConsulta);
@@ -119,6 +157,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         menuItemSobre.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, 0));
         menuItemSobre.setText("Sobre");
+        menuItemSobre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemSobreActionPerformed(evt);
+            }
+        });
         menuAjuda.add(menuItemSobre);
 
         menuPrincipal.add(menuAjuda);
@@ -131,14 +174,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tabbedPanePrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 638, Short.MAX_VALUE)
+                .addComponent(tabbedPanePrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 967, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tabbedPanePrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 471, Short.MAX_VALUE)
+                .addComponent(tabbedPanePrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 572, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -152,12 +195,59 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_menuItemCadastroPacienteActionPerformed
 
     private void menuItemConsultaPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemConsultaPacienteActionPerformed
-        // TODO add your handling code here:
+        tabbedPanePrincipal.add("Consulta de Paciente", new ConsultaDePacienteView(tabbedPanePrincipal));
+      tabbedPanePrincipal.revalidate();
+      tabbedPanePrincipal.repaint();
     }//GEN-LAST:event_menuItemConsultaPacienteActionPerformed
 
     private void menuItemCadastroVisitanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemCadastroVisitanteActionPerformed
-      
+       tabbedPanePrincipal.add("Cadastro de Visitante", new CadastroDeVisitanteView(tabbedPanePrincipal));
+      tabbedPanePrincipal.revalidate();
+      tabbedPanePrincipal.repaint();
     }//GEN-LAST:event_menuItemCadastroVisitanteActionPerformed
+
+    private void menuItemCadastroMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemCadastroMedicoActionPerformed
+         tabbedPanePrincipal.add("Cadastro de Médico", new CadastroDeMedicoView(tabbedPanePrincipal));
+      tabbedPanePrincipal.revalidate();
+      tabbedPanePrincipal.repaint();
+    }//GEN-LAST:event_menuItemCadastroMedicoActionPerformed
+
+    private void menuItemCadastroEnfermeiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemCadastroEnfermeiroActionPerformed
+        tabbedPanePrincipal.add("Cadastro de Enfermeiro", new CadastroDeEnfermeiroView(tabbedPanePrincipal));
+      tabbedPanePrincipal.revalidate();
+      tabbedPanePrincipal.repaint();
+    }//GEN-LAST:event_menuItemCadastroEnfermeiroActionPerformed
+
+    private void menuItemConsultaEnfermeiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemConsultaEnfermeiroActionPerformed
+        tabbedPanePrincipal.add("Consulta de Enfermeiro", new ConsultaDeEnfermeiroView(tabbedPanePrincipal));
+      tabbedPanePrincipal.revalidate();
+      tabbedPanePrincipal.repaint();
+    }//GEN-LAST:event_menuItemConsultaEnfermeiroActionPerformed
+
+    private void menuItemConsultaVisitanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemConsultaVisitanteActionPerformed
+        tabbedPanePrincipal.add("Consulta de Visitante", new ConsultaDeVisitanteView(tabbedPanePrincipal));
+      tabbedPanePrincipal.revalidate();
+      tabbedPanePrincipal.repaint();
+    }//GEN-LAST:event_menuItemConsultaVisitanteActionPerformed
+
+    private void menuItemConsultaMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemConsultaMedicoActionPerformed
+         tabbedPanePrincipal.add("Consulta de Medico", new ConsultaDeMedicoView(tabbedPanePrincipal));
+      tabbedPanePrincipal.revalidate();
+      tabbedPanePrincipal.repaint();
+    }//GEN-LAST:event_menuItemConsultaMedicoActionPerformed
+
+    private void menuItemSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemSobreActionPerformed
+        JOptionPane.showMessageDialog(this,"JHospital\n\nVersão 1.0\nCopyright MAguiar", "Sobre", JOptionPane.INFORMATION_MESSAGE);
+    
+    }//GEN-LAST:event_menuItemSobreActionPerformed
+
+    private void menuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemSairActionPerformed
+        {
+            if (JOptionPane.showConfirmDialog(this,"Deseja mesmo fechar o Sistema?!?"," Confirmação",JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION)
+             System.exit(0);
+        }
+
+    }//GEN-LAST:event_menuItemSairActionPerformed
 
     /**
      * @param args the command line arguments
