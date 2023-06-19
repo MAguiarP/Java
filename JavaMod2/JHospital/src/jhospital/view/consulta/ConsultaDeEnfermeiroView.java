@@ -10,11 +10,11 @@ import javax.swing.JTabbedPane;
  *
  * @author mathe
  */
-public class ConsultaDeVisitanteView extends javax.swing.JPanel {
-    
+public class ConsultaDeEnfermeiroView extends javax.swing.JPanel {
+   
     private JTabbedPane tabbedPane;
     
-    public ConsultaDeVisitanteView(JTabbedPane tabbedPanel) {
+    public ConsultaDeEnfermeiroView(JTabbedPane tabbedPanel) {
         this.tabbedPane = tabbedPanel;
         initComponents();
     }
@@ -31,8 +31,6 @@ public class ConsultaDeVisitanteView extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         textFieldNome = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        textFieldEmail = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         scrollPaneResultados = new javax.swing.JScrollPane();
@@ -40,32 +38,27 @@ public class ConsultaDeVisitanteView extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        setPreferredSize(new java.awt.Dimension(799, 470));
-        setVerifyInputWhenFocusTarget(false);
-
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setText("Consulta de Visitante");
+        jLabel1.setText("Consulta de Enfermeiro");
 
         jLabel2.setText("Nome :");
 
-        jLabel3.setText("Email :");
-
         tableResultados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Nome", "Endereço", "Email", "Telefone", "Paciente"
+                "Nome", "Email", "Telefone"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -81,8 +74,6 @@ public class ConsultaDeVisitanteView extends javax.swing.JPanel {
             tableResultados.getColumnModel().getColumn(0).setResizable(false);
             tableResultados.getColumnModel().getColumn(1).setResizable(false);
             tableResultados.getColumnModel().getColumn(2).setResizable(false);
-            tableResultados.getColumnModel().getColumn(3).setResizable(false);
-            tableResultados.getColumnModel().getColumn(4).setResizable(false);
         }
 
         jDesktopPane1.setLayer(scrollPaneResultados, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -120,13 +111,10 @@ public class ConsultaDeVisitanteView extends javax.swing.JPanel {
                                 .addComponent(jLabel1)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2))
+                                .addGap(38, 38, 38)
+                                .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(textFieldNome, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
-                                    .addComponent(textFieldEmail))
+                                .addComponent(textFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -151,11 +139,7 @@ public class ConsultaDeVisitanteView extends javax.swing.JPanel {
                         .addComponent(jLabel2)
                         .addComponent(textFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel3)
-                        .addComponent(textFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jDesktopPane1)
                 .addContainerGap())
@@ -169,11 +153,9 @@ public class ConsultaDeVisitanteView extends javax.swing.JPanel {
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JScrollPane scrollPaneResultados;
     private javax.swing.JTable tableResultados;
-    private javax.swing.JTextField textFieldEmail;
     private javax.swing.JTextField textFieldNome;
     // End of variables declaration//GEN-END:variables
 }

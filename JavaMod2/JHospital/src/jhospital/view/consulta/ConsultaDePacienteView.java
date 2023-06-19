@@ -4,16 +4,18 @@
  */
 package jhospital.view.consulta;
 
+import javax.swing.JTabbedPane;
+
 /**
  *
  * @author mathe
  */
 public class ConsultaDePacienteView extends javax.swing.JPanel {
 
-    /**
-     * Creates new form ConsultaPacienteView
-     */
-    public ConsultaDePacienteView() {
+     private JTabbedPane tabbedPane;
+    
+    public ConsultaDePacienteView(JTabbedPane tabbedPanel) {
+        this.tabbedPane = tabbedPanel; 
         initComponents();
     }
 

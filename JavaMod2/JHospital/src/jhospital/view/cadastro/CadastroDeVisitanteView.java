@@ -4,16 +4,18 @@
  */
 package jhospital.view.cadastro;
 
+import javax.swing.JTabbedPane;
+
 /**
  *
  * @author mathe
  */
 public class CadastroDeVisitanteView extends javax.swing.JPanel {
 
-    /**
-     * Creates new form CadastroDeVisitanteView
-     */
-    public CadastroDeVisitanteView() {
+       private JTabbedPane tabbedPane;
+
+    public CadastroDeVisitanteView(JTabbedPane tabbedPanel) {
+        this.tabbedPane = tabbedPanel; 
         initComponents();
     }
 

@@ -8,15 +8,20 @@ package jhospital.view.cadastro;
  *
  * @author mathe
  */
+
+
+import javax.swing.JTabbedPane;
+
+
+        
 public class CadastroDePacienteView extends javax.swing.JPanel {
 
-    /**
-     * Creates new form CadastroDePacienteView
-     */
-    public CadastroDePacienteView() {
+   private JTabbedPane tabbedPane;
+
+    public CadastroDePacienteView(JTabbedPane tabbedPanel) {
+        this.tabbedPane = tabbedPanel;
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

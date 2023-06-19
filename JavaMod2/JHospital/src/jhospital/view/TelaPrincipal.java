@@ -4,6 +4,8 @@
  */
 package jhospital.view;
 
+import jhospital.view.cadastro.CadastroDePacienteView;
+
 /**
  *
  * @author mathe
@@ -70,6 +72,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menuItemCadastroVisitante.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, 0));
         menuItemCadastroVisitante.setText("Cadastro Visitante");
         menuItemCadastroVisitante.setToolTipText("");
+        menuItemCadastroVisitante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemCadastroVisitanteActionPerformed(evt);
+            }
+        });
         menuCadastro.add(menuItemCadastroVisitante);
 
         menuItemCadastroMedico.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, 0));
@@ -139,12 +146,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuItemCadastroPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemCadastroPacienteActionPerformed
-        // TODO add your handling code here:
+      tabbedPanePrincipal.add("Cadastro de Paciente", new CadastroDePacienteView(tabbedPanePrincipal));
+      tabbedPanePrincipal.revalidate();
+      tabbedPanePrincipal.repaint();
     }//GEN-LAST:event_menuItemCadastroPacienteActionPerformed
 
     private void menuItemConsultaPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemConsultaPacienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_menuItemConsultaPacienteActionPerformed
+
+    private void menuItemCadastroVisitanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemCadastroVisitanteActionPerformed
+      
+    }//GEN-LAST:event_menuItemCadastroVisitanteActionPerformed
 
     /**
      * @param args the command line arguments
