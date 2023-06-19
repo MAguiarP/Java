@@ -8,12 +8,12 @@ package jhospital.view.consulta;
  *
  * @author mathe
  */
-public class ConsultaDePacienteView extends javax.swing.JPanel {
+public class ConsultaDeVisitanteView extends javax.swing.JPanel {
 
     /**
-     * Creates new form ConsultaPacienteView
+     * Creates new form ConsultaDeVisitanteView
      */
-    public ConsultaDePacienteView() {
+    public ConsultaDeVisitanteView() {
         initComponents();
     }
 
@@ -38,8 +38,11 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
+        setPreferredSize(new java.awt.Dimension(799, 470));
+        setVerifyInputWhenFocusTarget(false);
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setText("Consulta de Paciente");
+        jLabel1.setText("Consulta de Visitante");
 
         jLabel2.setText("Nome :");
 
@@ -72,12 +75,6 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
             }
         });
         scrollPaneResultados.setViewportView(tableResultados);
-        if (tableResultados.getColumnModel().getColumnCount() > 0) {
-            tableResultados.getColumnModel().getColumn(0).setResizable(false);
-            tableResultados.getColumnModel().getColumn(1).setResizable(false);
-            tableResultados.getColumnModel().getColumn(2).setResizable(false);
-            tableResultados.getColumnModel().getColumn(3).setResizable(false);
-        }
 
         jDesktopPane1.setLayer(scrollPaneResultados, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
