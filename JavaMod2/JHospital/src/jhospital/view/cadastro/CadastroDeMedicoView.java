@@ -163,7 +163,16 @@ public class CadastroDeMedicoView extends javax.swing.JPanel {
        tabbedPane.validate();
        tabbedPane.repaint();        // TODO add your handling code here:
     }//GEN-LAST:event_buttonCancelarActionPerformed
-
+    }
+        private void limparDados(){
+           textFieldNome.setText("");
+           textFieldEmail.setText("");
+           textFieldEndereco.setText("");
+           textFieldTelefone.setText("");
+           textFieldEspecialidade.setText("");
+           textFieldHorasMensais.setText("");
+           textFieldValorDaHora.setText("");
+         
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCancelar;

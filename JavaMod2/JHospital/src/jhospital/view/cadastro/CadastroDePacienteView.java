@@ -183,9 +183,20 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
        tabbedPane.validate();
        tabbedPane.repaint();
        }
+    }
+       private void limparDados(){
+           textFieldNome.setText("");
+           textFieldEmail.setText("");
+           textFieldEndereco.setText("");
+           textFieldTelefone.setText("");
+           textFieldQuarto.setText("");
+           textFieldDoenca.setText("");
+           textFieldDiasInternado.setText("");
+          comboBoxPlanoDeSaude.setSelectedIndex(0);
+           
+           
+       
     }//GEN-LAST:event_buttonCancelarActionPerformed
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCancelar;
     private javax.swing.JButton buttonSalvar;
@@ -208,3 +219,4 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
     private javax.swing.JTextField textFieldTelefone;
     // End of variables declaration//GEN-END:variables
 }
+

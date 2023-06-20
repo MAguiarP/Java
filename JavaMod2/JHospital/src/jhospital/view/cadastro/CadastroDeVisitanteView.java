@@ -147,7 +147,14 @@ public class CadastroDeVisitanteView extends javax.swing.JPanel {
        tabbedPane.validate();
        tabbedPane.repaint();
     }//GEN-LAST:event_buttonCancelarActionPerformed
-
+    }
+    private void limparDados(){
+           textFieldNome.setText("");
+           textFieldEmail.setText("");
+           textFieldEndereco.setText("");
+           textFieldTelefone.setText("");
+           textFieldPaciente.setText("");
+         
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCancelar;
