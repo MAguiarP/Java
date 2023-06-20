@@ -5,6 +5,7 @@
 package jhospital.controller;
 
 import java.util.List;
+import jhospital.dao.PacienteDAO;
 import jhospital.model.Paciente;
 
 /**
@@ -15,9 +16,23 @@ public class PacienteController {
 
     public void inserir(String nome, String email, String endereco, String telefone, String quarto, String doenca,
              String diasInternado, String temPlanoDeSaude)
-     throws Exception{
+    {   Paciente paciente = new Paciente();
+            paciente.setNome(nome);
+            paciente.setEmail(email);
+            paciente.setTelefone(telefone);
+            paciente.setEndereco(endereco);
+            paciente.setNumerodoquarto(Integer.parseInt(quarto));
+            paciente.setDoenca(doenca);
+            paciente.setDiasdeinternacao(Integer.parseInt(diasInternado));
+            
+            if(temPlanoDeSaude.equalsIgnoreCase(" Sim")){
+                paciente.setTemplanodesaude(true);
+            } else {
+                paciente.setTemplanodesaude(false);
+            }
+           
+            
     }
-
     public void alterar(Integer id, String nome, String email, String endereco, String telefone, String quarto, String doenca,
              String diasInternado, String temPlanoDeSaude) 
      throws Exception{

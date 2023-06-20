@@ -11,9 +11,6 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="menuItemSair">
               <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="Q"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Sair"/>
               </Properties>
               <Events>
@@ -30,9 +27,6 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="menuItemCadastroPaciente">
               <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="P"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Cadastro Paciente"/>
               </Properties>
               <Events>
@@ -41,9 +35,6 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menuItemCadastroVisitante">
               <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="V"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Cadastro Visitante"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
@@ -53,9 +44,6 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menuItemCadastroMedico">
               <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="M"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Cadastro M&#xe9;dico"/>
               </Properties>
               <Events>
@@ -64,9 +52,6 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menuItemCadastroEnfermeiro">
               <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="E"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Cadastro Enfermeiro"/>
               </Properties>
               <Events>
@@ -82,9 +67,6 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="menuItemConsultaPaciente">
               <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="P"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Consulta Paciente"/>
               </Properties>
               <Events>
@@ -93,9 +75,6 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menuItemConsultaEnfermeiro">
               <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="E"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Consulta Enfermeiro"/>
               </Properties>
               <Events>
@@ -104,9 +83,6 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menuItemConsultaVisitante">
               <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="V"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Consulta Visitante"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
@@ -116,9 +92,6 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menuItemConsultaMedico">
               <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="M"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Consulta M&#xe9;dico"/>
               </Properties>
               <Events>
@@ -134,9 +107,6 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="menuItemSobre">
               <Properties>
-                <Property name="accelerator" type="javax.swing.KeyStroke" editor="org.netbeans.modules.form.editors.KeyStrokeEditor">
-                  <KeyStroke key="S"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Sobre"/>
               </Properties>
               <Events>

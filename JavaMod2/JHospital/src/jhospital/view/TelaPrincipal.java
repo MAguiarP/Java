@@ -63,7 +63,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         menuArquivo.setText("Arquivo");
 
-        menuItemSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, 0));
         menuItemSair.setText("Sair");
         menuItemSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,7 +76,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menuCadastro.setText("Cadastro");
         menuCadastro.setToolTipText("");
 
-        menuItemCadastroPaciente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, 0));
         menuItemCadastroPaciente.setText("Cadastro Paciente");
         menuItemCadastroPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +84,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         menuCadastro.add(menuItemCadastroPaciente);
 
-        menuItemCadastroVisitante.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, 0));
         menuItemCadastroVisitante.setText("Cadastro Visitante");
         menuItemCadastroVisitante.setToolTipText("");
         menuItemCadastroVisitante.addActionListener(new java.awt.event.ActionListener() {
@@ -96,7 +93,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         menuCadastro.add(menuItemCadastroVisitante);
 
-        menuItemCadastroMedico.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, 0));
         menuItemCadastroMedico.setText("Cadastro Médico");
         menuItemCadastroMedico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,7 +101,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         menuCadastro.add(menuItemCadastroMedico);
 
-        menuItemCadastroEnfermeiro.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, 0));
         menuItemCadastroEnfermeiro.setText("Cadastro Enfermeiro");
         menuItemCadastroEnfermeiro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,7 +113,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         menuConsulta.setText("Consulta");
 
-        menuItemConsultaPaciente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, 0));
         menuItemConsultaPaciente.setText("Consulta Paciente");
         menuItemConsultaPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,7 +121,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         menuConsulta.add(menuItemConsultaPaciente);
 
-        menuItemConsultaEnfermeiro.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, 0));
         menuItemConsultaEnfermeiro.setText("Consulta Enfermeiro");
         menuItemConsultaEnfermeiro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +129,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         menuConsulta.add(menuItemConsultaEnfermeiro);
 
-        menuItemConsultaVisitante.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, 0));
         menuItemConsultaVisitante.setText("Consulta Visitante");
         menuItemConsultaVisitante.setToolTipText("");
         menuItemConsultaVisitante.addActionListener(new java.awt.event.ActionListener() {
@@ -146,7 +138,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         menuConsulta.add(menuItemConsultaVisitante);
 
-        menuItemConsultaMedico.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, 0));
         menuItemConsultaMedico.setText("Consulta Médico");
         menuItemConsultaMedico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,7 +150,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         menuAjuda.setText("Ajuda");
 
-        menuItemSobre.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, 0));
         menuItemSobre.setText("Sobre");
         menuItemSobre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

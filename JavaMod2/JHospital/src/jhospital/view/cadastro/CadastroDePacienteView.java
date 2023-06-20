@@ -12,6 +12,7 @@ package jhospital.view.cadastro;
 
 import javax.swing.JOptionPane;
 import javax.swing.JTabbedPane;
+import jhospital.controller.PacienteController;
 
 
         
@@ -70,6 +71,11 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
         comboBoxPlanoDeSaude.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sim", "Não" }));
 
         buttonSalvar.setText("Salvar");
+        buttonSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonSalvarActionPerformed(evt);
+            }
+        });
 
         buttonCancelar.setText("Cancelar");
         buttonCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -183,6 +189,10 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
        tabbedPane.validate();
        tabbedPane.repaint();
        }
+       
+       
+       
+       
     }
        private void limparDados(){
            textFieldNome.setText("");
@@ -194,9 +204,29 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
            textFieldDiasInternado.setText("");
           comboBoxPlanoDeSaude.setSelectedIndex(0);
            
-           
-       
     }//GEN-LAST:event_buttonCancelarActionPerformed
+
+    private void buttonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarActionPerformed
+        if (textFieldNome != null && ! textFieldNome.getText().equals("") &&  
+           textFieldEmail != null && !textFieldEmail.getText().equals("") && 
+           textFieldEndereco != null && !textFieldEndereco.getText().equals("") && 
+           textFieldDoenca != null && !textFieldDoenca.getText().equals("")
+            ) {
+            PacienteController pc = new PacienteController();
+            try{
+                pc.inserir(textFieldNome.getText(),textFieldEmail.getText(),textFieldEndereco.getText(),
+                           textFieldQuarto.getText(),textFieldDoenca.getText(),textFieldDoenca.getText(),
+                           textFieldDiasInternado.getText(), (String)comboBoxPlanoDeSaude.getSelectedItem());
+                JOptionPane.showMessageDialog(this," Contato salvo com sucesso!", " Sucesso", JOptionPane.INFORMATION_MESSAGE );
+                    limparDados();
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(this," Não foi possível salvar contato\n" + e.getLocalizedMessage()," Erro", JOptionPane.ERROR_MESSAGE );
+            }
+        } else{
+            JOptionPane.showMessageDialog(this," O nome, email, edereço e doença do " + " Paciente são campos Obrigatórios!", " Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_buttonSalvarActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCancelar;
     private javax.swing.JButton buttonSalvar;
