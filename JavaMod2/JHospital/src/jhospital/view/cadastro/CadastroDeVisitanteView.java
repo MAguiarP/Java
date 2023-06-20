@@ -6,7 +6,7 @@ package jhospital.view.cadastro;
 
 import javax.swing.JOptionPane;
 import javax.swing.JTabbedPane;
-import jhospital.controller.PacienteController;
+import jhospital.controller.VisitanteController;
 
 /**
  *
@@ -146,17 +146,19 @@ public class CadastroDeVisitanteView extends javax.swing.JPanel {
         if (textFieldNome != null && ! textFieldNome.getText().equals("") &&  
            textFieldEmail != null && !textFieldEmail.getText().equals("") && 
            textFieldEndereco != null && !textFieldEndereco.getText().equals("") && 
-            textFieldTelefone != null && !textFieldDoenca.getText().equals("")
-             textFieldPaciente 
+            textFieldTelefone != null && !textFieldTelefone.getText().equals("") && 
+             textFieldPaciente != null && !textFieldPaciente.getText().equals("")
                
                
-            ) {
-            PacienteController pc = new PacienteController();
+        ) {
+            VisitanteController pc = new VisitanteController();
             try{
-                pc.inserir(textFieldNome.getText(),textFieldEmail.getText(),textFieldEndereco.getText(),
-                           textFieldQuarto.getText(),textFieldDoenca.getText(),textFieldDoenca.getText(),
-                           textFieldDiasInternado.getText(), (String)comboBoxPlanoDeSaude.getSelectedItem());
-                JOptionPane.showMessageDialog(this," Contato salvo com sucesso!", " Sucesso", JOptionPane.INFORMATION_MESSAGE );
+                pc.inserir(textFieldNome.getText(),
+                           textFieldEndereco.getText(),
+                           textFieldEmail.getText(),
+                           textFieldTelefone.getText(),
+                           textFieldPaciente.getText());
+                        JOptionPane.showMessageDialog(this," Contato salvo com sucesso!", " Sucesso", JOptionPane.INFORMATION_MESSAGE );
                     limparDados();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this," Não foi possível salvar contato\n" + e.getLocalizedMessage()," Erro", JOptionPane.ERROR_MESSAGE );
