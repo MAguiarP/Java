@@ -164,7 +164,7 @@ public class CadastroDeVisitanteView extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this," Não foi possível salvar contato\n" + e.getLocalizedMessage()," Erro", JOptionPane.ERROR_MESSAGE );
             }
         } else{
-            JOptionPane.showMessageDialog(this," O nome, email, edereço e doença do " + " Paciente são campos Obrigatórios!", " Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this," O nome, email, endereço  do " + " Paciente são campos Obrigatórios!", " Erro", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_buttonSalvarActionPerformed
   
