@@ -4,6 +4,7 @@
  */
 package jhospital.view.cadastro;
 
+import javax.swing.JOptionPane;
 import javax.swing.JTabbedPane;
 
 /**
@@ -66,6 +67,11 @@ public class CadastroDeMedicoView extends javax.swing.JPanel {
         buttonSalvar.setText("Salvar");
 
         buttonCancelar.setText("Cancelar");
+        buttonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -151,7 +157,14 @@ public class CadastroDeMedicoView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
+        if(JOptionPane.showConfirmDialog(this, "Deseja mesmo fechar o cadastro de clientes sem salvar?"," Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+       tabbedPane.remove(this);
+       tabbedPane.validate();
+       tabbedPane.repaint();        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonCancelarActionPerformed
 
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCancelar;
     private javax.swing.JButton buttonSalvar;

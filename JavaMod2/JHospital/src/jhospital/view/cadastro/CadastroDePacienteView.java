@@ -10,6 +10,7 @@ package jhospital.view.cadastro;
  */
 
 
+import javax.swing.JOptionPane;
 import javax.swing.JTabbedPane;
 
 
@@ -71,6 +72,11 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
         buttonSalvar.setText("Salvar");
 
         buttonCancelar.setText("Cancelar");
+        buttonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCancelarActionPerformed(evt);
+            }
+        });
 
         textFieldQuarto.setToolTipText("");
 
@@ -170,6 +176,14 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
                 .addContainerGap(39, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
+       if(JOptionPane.showConfirmDialog(this, "Deseja mesmo fechar o cadastro de clientes sem salvar?"," Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+       tabbedPane.remove(this);
+       tabbedPane.validate();
+       tabbedPane.repaint();
+       }
+    }//GEN-LAST:event_buttonCancelarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
