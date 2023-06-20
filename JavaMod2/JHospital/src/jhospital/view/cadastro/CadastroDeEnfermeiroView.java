@@ -150,7 +150,14 @@ public class CadastroDeEnfermeiroView extends javax.swing.JPanel {
        tabbedPane.validate();
        tabbedPane.repaint();
     }//GEN-LAST:event_buttonCancelarActionPerformed
-
+    }
+      private void limparDados(){
+           textFieldNome.setText("");
+           textFieldEmail.setText("");
+           textFieldEndereco.setText("");
+           textFieldTelefone.setText("");
+           textFieldHorasMensais.setText("");
+           textFieldValorDaHora.setText("");
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonCancelar;
