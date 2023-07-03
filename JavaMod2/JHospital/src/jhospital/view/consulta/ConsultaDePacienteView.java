@@ -4,7 +4,11 @@
  */
 package jhospital.view.consulta;
 
+import java.util.List;
 import javax.swing.JTabbedPane;
+import javax.swing.table.DefaultTableModel;
+import jhospital.controller.PacienteController;
+import jhospital.model.Paciente;
 
 /**
  *
@@ -37,8 +41,8 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
         jDesktopPane1 = new javax.swing.JDesktopPane();
         scrollPaneResultados = new javax.swing.JScrollPane();
         tableResultados = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jBConsultar = new javax.swing.JButton();
+        jBFechar = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Consulta de Paciente");
@@ -97,9 +101,19 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jButton1.setText("Consultar");
+        jBConsultar.setText("Consultar");
+        jBConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBConsultarActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Fechar");
+        jBFechar.setText("Fechar");
+        jBFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBFecharActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -126,10 +140,10 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addComponent(jBConsultar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jBFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(51, 51, 51)))))))
                 .addContainerGap())
         );
@@ -142,13 +156,13 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(7, 7, 7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel2)
                         .addComponent(textFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jBFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel3)
                         .addComponent(textFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -158,10 +172,41 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jBFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBFecharActionPerformed
+        tabbedPane.remove(this);
+        tabbedPane.validate();
+        tabbedPane.repaint();
+    }//GEN-LAST:event_jBFecharActionPerformed
+
+    private void jBConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBConsultarActionPerformed
+        PacienteController pc = new PacienteController();
+        try{
+            List<Paciente> ListaDePacientes = pc.buscar(
+                    textFieldNome.getText(), textFieldEmail.getText());
+            DefaultTableModel model = (DefaultTableModel) 
+                    tableResultados.getModel();
+        for (int i = model.getRowCount() - 1; i >= 0; 1--) {
+            model.removeRow(i);
+        }
+        if (ListaDePacientes != null) {
+            for (int i = 0; i< ListaDePacientes.size(); i++) {
+                Paciente paciente = ListaDePacientes.get(i);
+                String[] p = new String[]{
+                    paciente.getNome(),
+                    paciente.getEndereco(),
+                    paciente.getEmail(),
+                    paciente.getTelefone(),
+                    String.valueOf(paciente.getNumerodoquarto())};
+                model.insertRow(i,p);
+            }
+        }
+        }
+    }//GEN-LAST:event_jBConsultarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jBConsultar;
+    private javax.swing.JButton jBFechar;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

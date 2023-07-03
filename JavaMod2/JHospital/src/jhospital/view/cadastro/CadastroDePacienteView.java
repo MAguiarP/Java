@@ -184,7 +184,7 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
-       if(JOptionPane.showConfirmDialog(this, "Deseja mesmo fechar o cadastro de clientes sem salvar?"," Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+       if(JOptionPane.showConfirmDialog(this, "Deseja mesmo fechar o cadastro de Paciente sem salvar?"," Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
        tabbedPane.remove(this);
        tabbedPane.validate();
        tabbedPane.repaint();
@@ -228,7 +228,7 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this," Não foi possível salvar contato\n" + e.getLocalizedMessage()," Erro", JOptionPane.ERROR_MESSAGE );
             }
         } else{
-            JOptionPane.showMessageDialog(this," O nome, email, endereço e doença do " + " Paciente são campos Obrigatórios!", " Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this," Todos os campos do " + " Paciente são campos Obrigatórios!", " Erro", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_buttonSalvarActionPerformed
 

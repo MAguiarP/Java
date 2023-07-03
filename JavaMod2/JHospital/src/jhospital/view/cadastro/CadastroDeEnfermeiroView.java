@@ -152,35 +152,37 @@ public class CadastroDeEnfermeiroView extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
-        if(JOptionPane.showConfirmDialog(this, "Deseja mesmo fechar o cadastro de clientes sem salvar?"," Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+        if(JOptionPane.showConfirmDialog(this, "Deseja mesmo fechar o cadastro de Enfermeiro sem salvar?"," Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
        tabbedPane.remove(this);
        tabbedPane.validate();
        tabbedPane.repaint();
     }//GEN-LAST:event_buttonCancelarActionPerformed
     }
     private void buttonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarActionPerformed
-          if (textFieldNome != null && ! textFieldNome.getText().equals("") &&  
+           if (textFieldNome != null && ! textFieldNome.getText().equals("") &&  
            textFieldEmail != null && !textFieldEmail.getText().equals("") && 
            textFieldEndereco != null && !textFieldEndereco.getText().equals("") && 
-           textFieldDoenca != null && !textFieldDoenca.getText().equals(""))
+           textFieldTelefone != null && !textFieldTelefone.getText().equals("") && 
+           textFieldValorDaHora != null && !textFieldValorDaHora.getText().equals("") && 
+           textFieldHorasMensais != null && !textFieldHorasMensais.getText().equals("")   
+           )
           {
-            EnfermeiroController pc = new PacienteController();
+            EnfermeiroController pc = new EnfermeiroController();
             try{
                 pc.inserir(textFieldNome.getText(),
-                        textFieldEmail.getText(),
-                        textFieldEndereco.getText(),
-                        textFieldQuarto.getText(),
-                        textFieldDoenca.getText(),
-                        textFieldDoenca.getText(),
-                        textFieldDiasInternado.getText(), 
-                        (String)comboBoxPlanoDeSaude.getSelectedItem());
+                           textFieldEndereco.getText(),
+                           textFieldEmail.getText(),
+                           textFieldTelefone.getText(),
+                           textFieldHorasMensais.getText(),
+                           textFieldValorDaHora.getText()
+                           );
                 JOptionPane.showMessageDialog(this," Contato salvo com sucesso!", " Sucesso", JOptionPane.INFORMATION_MESSAGE );
                     limparDados();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this," Não foi possível salvar contato\n" + e.getLocalizedMessage()," Erro", JOptionPane.ERROR_MESSAGE );
             }
         } else{
-            JOptionPane.showMessageDialog(this," O nome, email, endereço e doença do " + " Paciente são campos Obrigatórios!", " Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this," Todos os campos do " + " Enfermeiro são campos Obrigatórios!", " Erro", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_buttonSalvarActionPerformed
     

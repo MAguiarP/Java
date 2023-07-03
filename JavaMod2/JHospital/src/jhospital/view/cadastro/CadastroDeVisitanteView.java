@@ -167,12 +167,12 @@ public class CadastroDeVisitanteView extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this," Não foi possível salvar contato\n" + e.getLocalizedMessage()," Erro", JOptionPane.ERROR_MESSAGE );
             }
         } else{
-            JOptionPane.showMessageDialog(this," O nome, email, endereço  do " + " Paciente são campos Obrigatórios!", " Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this," Todos os campos do " + " Visitante são campos Obrigatórios!", " Erro", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_buttonSalvarActionPerformed
 
     private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
-      if(JOptionPane.showConfirmDialog(this, "Deseja mesmo fechar o cadastro de clientes sem salvar?"," Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+      if(JOptionPane.showConfirmDialog(this, "Deseja mesmo fechar o cadastro de Visitante sem salvar?"," Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
        tabbedPane.remove(this);
        tabbedPane.validate();
        tabbedPane.repaint();
