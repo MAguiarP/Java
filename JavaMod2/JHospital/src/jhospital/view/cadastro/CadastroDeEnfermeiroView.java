@@ -178,7 +178,7 @@ public class CadastroDeEnfermeiroView extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this," O nome, email, endereço e doença do " + " Paciente são campos Obrigatórios!", " Erro", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_buttonSalvarActionPerformed
-    }
+    
 
       private void limparDados(){
            textFieldNome.setText("");

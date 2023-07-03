@@ -179,7 +179,7 @@ public class CadastroDeMedicoView extends javax.swing.JPanel {
                
                
         ) {
-            VisitanteController pc = new VisitanteController();
+            MedicoController pc = new MedicoController();
             try{
                 pc.inserir(textFieldNome.getText(),
                            textFieldEndereco.getText(),
@@ -196,7 +196,7 @@ public class CadastroDeMedicoView extends javax.swing.JPanel {
         }
     
     }//GEN-LAST:event_buttonSalvarActionPerformed
-    }
+    
         private void limparDados(){
            textFieldNome.setText("");
            textFieldEmail.setText("");
