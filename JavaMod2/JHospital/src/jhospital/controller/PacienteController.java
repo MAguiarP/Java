@@ -16,7 +16,7 @@ public class PacienteController {
 
     public void inserir(String nome, String email, String endereco, String telefone, String quarto, String doenca,
              String diasInternado, String temPlanoDeSaude)
-    {   Paciente paciente = new Paciente();
+    {     Paciente paciente = new Paciente();
             paciente.setNome(nome);
             paciente.setEmail(email);
             paciente.setTelefone(telefone);
@@ -30,8 +30,7 @@ public class PacienteController {
             } else {
                 paciente.setTemplanodesaude(false);
             }
-           
-            
+      
     }
     public void alterar(Integer id, String nome, String email, String endereco, String telefone, String quarto, String doenca,
              String diasInternado, String temPlanoDeSaude) 

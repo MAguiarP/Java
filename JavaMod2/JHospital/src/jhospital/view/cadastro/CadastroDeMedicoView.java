@@ -6,6 +6,7 @@ package jhospital.view.cadastro;
 
 import javax.swing.JOptionPane;
 import javax.swing.JTabbedPane;
+import jhospital.controller.MedicoController;
 
 /**
  *
@@ -65,6 +66,11 @@ public class CadastroDeMedicoView extends javax.swing.JPanel {
         jLabel8.setText("Horas Mensais :");
 
         buttonSalvar.setText("Salvar");
+        buttonSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonSalvarActionPerformed(evt);
+            }
+        });
 
         buttonCancelar.setText("Cancelar");
         buttonCancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -163,6 +169,33 @@ public class CadastroDeMedicoView extends javax.swing.JPanel {
        tabbedPane.validate();
        tabbedPane.repaint();        // TODO add your handling code here:
     }//GEN-LAST:event_buttonCancelarActionPerformed
+    }
+    private void buttonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSalvarActionPerformed
+          if (textFieldNome != null && ! textFieldNome.getText().equals("") &&  
+           textFieldEmail != null && !textFieldEmail.getText().equals("") && 
+           textFieldEndereco != null && !textFieldEndereco.getText().equals("") && 
+            textFieldTelefone != null && !textFieldTelefone.getText().equals("") && 
+             textFieldPaciente != null && !textFieldPaciente.getText().equals("")
+               
+               
+        ) {
+            VisitanteController pc = new VisitanteController();
+            try{
+                pc.inserir(textFieldNome.getText(),
+                           textFieldEndereco.getText(),
+                           textFieldEmail.getText(),
+                           textFieldTelefone.getText(),
+                           textFieldPaciente.getText());
+                        JOptionPane.showMessageDialog(this," Contato salvo com sucesso!", " Sucesso", JOptionPane.INFORMATION_MESSAGE );
+                    limparDados();
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(this," Não foi possível salvar contato\n" + e.getLocalizedMessage()," Erro", JOptionPane.ERROR_MESSAGE );
+            }
+        } else{
+            JOptionPane.showMessageDialog(this," O nome, email, endereço  do " + " Paciente são campos Obrigatórios!", " Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    
+    }//GEN-LAST:event_buttonSalvarActionPerformed
     }
         private void limparDados(){
            textFieldNome.setText("");

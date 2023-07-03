@@ -65,6 +65,11 @@ public class CadastroDeVisitanteView extends javax.swing.JPanel {
         });
 
         buttonCancelar.setText("Cancelar");
+        buttonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonCancelarActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Paciente :");
 
@@ -167,8 +172,15 @@ public class CadastroDeVisitanteView extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this," O nome, email, endereço  do " + " Paciente são campos Obrigatórios!", " Erro", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_buttonSalvarActionPerformed
+
+    private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
+      if(JOptionPane.showConfirmDialog(this, "Deseja mesmo fechar o cadastro de clientes sem salvar?"," Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+       tabbedPane.remove(this);
+       tabbedPane.validate();
+       tabbedPane.repaint();
+    }//GEN-LAST:event_buttonCancelarActionPerformed
   
-    
+    }
    
     private void limparDados(){
            textFieldNome.setText("");
