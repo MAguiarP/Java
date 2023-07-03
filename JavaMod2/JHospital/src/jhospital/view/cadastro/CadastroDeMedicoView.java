@@ -174,18 +174,22 @@ public class CadastroDeMedicoView extends javax.swing.JPanel {
           if (textFieldNome != null && ! textFieldNome.getText().equals("") &&  
            textFieldEmail != null && !textFieldEmail.getText().equals("") && 
            textFieldEndereco != null && !textFieldEndereco.getText().equals("") && 
-            textFieldTelefone != null && !textFieldTelefone.getText().equals("") && 
-             textFieldPaciente != null && !textFieldPaciente.getText().equals("")
-               
-               
-        ) {
+           textFieldTelefone != null && !textFieldTelefone.getText().equals("") && 
+           textFieldEspecialidade != null && !textFieldEspecialidade.getText().equals("") && 
+           textFieldValorDaHora != null && !textFieldValorDaHora.getText().equals("") && 
+           textFieldHorasMensais != null && !textFieldHorasMensais.getText().equals("")   
+           )
+          {
             MedicoController pc = new MedicoController();
             try{
                 pc.inserir(textFieldNome.getText(),
                            textFieldEndereco.getText(),
                            textFieldEmail.getText(),
                            textFieldTelefone.getText(),
-                           textFieldPaciente.getText());
+                           textFieldEspecialidade.getText(),
+                           textFieldHorasMensais.getText(),
+                            textFieldValorDaHora.getText()
+                           );
                         JOptionPane.showMessageDialog(this," Contato salvo com sucesso!", " Sucesso", JOptionPane.INFORMATION_MESSAGE );
                     limparDados();
             } catch (Exception e) {

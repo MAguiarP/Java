@@ -210,13 +210,18 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
         if (textFieldNome != null && ! textFieldNome.getText().equals("") &&  
            textFieldEmail != null && !textFieldEmail.getText().equals("") && 
            textFieldEndereco != null && !textFieldEndereco.getText().equals("") && 
-           textFieldDoenca != null && !textFieldDoenca.getText().equals("")
-            ) {
+           textFieldDoenca != null && !textFieldDoenca.getText().equals("")) 
+        {
             PacienteController pc = new PacienteController();
             try{
-                pc.inserir(textFieldNome.getText(),textFieldEmail.getText(),textFieldEndereco.getText(),
-                           textFieldQuarto.getText(),textFieldDoenca.getText(),textFieldDoenca.getText(),
-                           textFieldDiasInternado.getText(), (String)comboBoxPlanoDeSaude.getSelectedItem());
+                pc.inserir(textFieldNome.getText(),
+                        textFieldEmail.getText(),
+                        textFieldEndereco.getText(),
+                        textFieldQuarto.getText(),
+                        textFieldDoenca.getText(),
+                        textFieldDoenca.getText(),
+                        textFieldDiasInternado.getText(),
+                        (String)comboBoxPlanoDeSaude.getSelectedItem());
                 JOptionPane.showMessageDialog(this," Contato salvo com sucesso!", " Sucesso", JOptionPane.INFORMATION_MESSAGE );
                     limparDados();
             } catch (Exception e) {

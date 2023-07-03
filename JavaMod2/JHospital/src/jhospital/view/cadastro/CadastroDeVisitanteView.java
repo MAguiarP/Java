@@ -152,10 +152,8 @@ public class CadastroDeVisitanteView extends javax.swing.JPanel {
            textFieldEmail != null && !textFieldEmail.getText().equals("") && 
            textFieldEndereco != null && !textFieldEndereco.getText().equals("") && 
             textFieldTelefone != null && !textFieldTelefone.getText().equals("") && 
-             textFieldPaciente != null && !textFieldPaciente.getText().equals("")
-               
-               
-        ) {
+             textFieldPaciente != null && !textFieldPaciente.getText().equals("")) 
+        {
             VisitanteController pc = new VisitanteController();
             try{
                 pc.inserir(textFieldNome.getText(),
