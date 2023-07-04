@@ -118,6 +118,41 @@ public class PacienteDAO implements Serializable {
         }
     }
 
+    
+    public List<Paciente> getListaDePacientes(String nome, String email) throws Exception {
+        EntityManager em = getEntityManager();
+        try{
+            String hql = "";
+            if( nome != null && ! nome.equals("")) {
+                hql += " WHERE name like (:nome)";
+            }
+            if (email != null && !email.equals("")){
+                if (!hql.equals("")) {
+                    hql += " AND email like lower(:email)";
+                } else {
+                    hql += "WHERE email like lower(:email)";
+                }
+            }
+                hql = "FROM Paciente" + hql;
+                Query q = em.createQuery(hql);
+                if(nome != null && !nome.equals("")){
+                    q.setParameter("nome", "%" + nome + "%");
+                }
+                
+                if(email != null && !email.equals("")) {
+                    q.setParameter("email", "%" + email.toLowerCase() + "%");
+                    
+                }
+                return q.getResultList();
+               
+        } finally{
+                    em.close();
+                    }
+           
+               
+    }
+    
+       
     public Paciente findPaciente(Integer id) {
         EntityManager em = getEntityManager();
         try {

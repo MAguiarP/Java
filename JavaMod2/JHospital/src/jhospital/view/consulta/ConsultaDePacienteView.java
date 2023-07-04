@@ -5,6 +5,7 @@
 package jhospital.view.consulta;
 
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.JTabbedPane;
 import javax.swing.table.DefaultTableModel;
 import jhospital.controller.PacienteController;
@@ -185,7 +186,7 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
                     textFieldNome.getText(), textFieldEmail.getText());
             DefaultTableModel model = (DefaultTableModel) 
                     tableResultados.getModel();
-        for (int i = model.getRowCount() - 1; i >= 0; 1--) {
+      for (int i = model.getRowCount() - 1; i >= 0; i--){
             model.removeRow(i);
         }
         if (ListaDePacientes != null) {
@@ -200,6 +201,10 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
                 model.insertRow(i,p);
             }
         }
+        
+        tableResultados.setModel(model);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,"Não foi possível Consultar!\n\n" + e.getLocalizedMessage());
         }
     }//GEN-LAST:event_jBConsultarActionPerformed
 
