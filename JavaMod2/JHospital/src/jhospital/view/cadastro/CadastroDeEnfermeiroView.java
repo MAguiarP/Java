@@ -167,11 +167,11 @@ public class CadastroDeEnfermeiroView extends javax.swing.JPanel {
            textFieldHorasMensais != null && !textFieldHorasMensais.getText().equals("")   
            )
           {
-            EnfermeiroController pc = new EnfermeiroController();
+            EnfermeiroController ec = new EnfermeiroController();
             try{
-                pc.inserir(textFieldNome.getText(),
-                           textFieldEndereco.getText(),
-                           textFieldEmail.getText(),
+                ec.inserir(textFieldNome.getText().toUpperCase(),
+                           textFieldEndereco.getText().toUpperCase(),
+                           textFieldEmail.getText().toLowerCase(),
                            textFieldTelefone.getText(),
                            textFieldHorasMensais.getText(),
                            textFieldValorDaHora.getText()

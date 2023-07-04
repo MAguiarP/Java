@@ -180,11 +180,11 @@ public class CadastroDeMedicoView extends javax.swing.JPanel {
            textFieldHorasMensais != null && !textFieldHorasMensais.getText().equals("")   
            )
           {
-            MedicoController pc = new MedicoController();
+            MedicoController mc = new MedicoController();
             try{
-                pc.inserir(textFieldNome.getText(),
-                           textFieldEndereco.getText(),
-                           textFieldEmail.getText(),
+                mc.inserir(textFieldNome.getText().toUpperCase(),
+                           textFieldEndereco.getText().toUpperCase(),
+                           textFieldEmail.getText().toLowerCase(),
                            textFieldTelefone.getText(),
                            textFieldEspecialidade.getText(),
                            textFieldHorasMensais.getText(),

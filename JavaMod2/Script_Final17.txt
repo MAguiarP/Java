@@ -1,0 +1,29 @@
+DROP DATABASE "DBControleEstoque";
+DROP ROLE "UserControleEstoque";
+DROP DATABASE "DBJHospital";
+DROP ROLE "UserJHospital";
+
+
+
+CREATE ROLE "UserJHospital" LOGIN
+  
+ENCRYPTED PASSWORD '123456'
+
+SUPERUSER INHERIT CREATEDB CREATEROLE REPLICATION;
+
+
+
+
+CREATE DATABASE "DBJHospital"
+ 
+WITH OWNER = "UserJHospital"
+
+ENCODING = 'UTF8'
+
+TABLESPACE = pg_default
+
+LC_COLLATE = 'Portuguese_Brazil.1252'
+
+LC_CTYPE = 'Portuguese_Brazil.1252'
+
+CONNECTION LIMIT = -1;

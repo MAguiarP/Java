@@ -154,13 +154,13 @@ public class CadastroDeVisitanteView extends javax.swing.JPanel {
             textFieldTelefone != null && !textFieldTelefone.getText().equals("") && 
              textFieldPaciente != null && !textFieldPaciente.getText().equals("")) 
         {
-            VisitanteController pc = new VisitanteController();
+            VisitanteController vc = new VisitanteController();
             try{
-                pc.inserir(textFieldNome.getText(),
-                           textFieldEndereco.getText(),
-                           textFieldEmail.getText(),
+                vc.inserir(textFieldNome.getText().toUpperCase(),
+                           textFieldEndereco.getText().toUpperCase(),
+                           textFieldEmail.getText().toLowerCase(),
                            textFieldTelefone.getText(),
-                           textFieldPaciente.getText());
+                           textFieldPaciente.getText().toUpperCase());
                         JOptionPane.showMessageDialog(this," Contato salvo com sucesso!", " Sucesso", JOptionPane.INFORMATION_MESSAGE );
                     limparDados();
             } catch (Exception e) {
