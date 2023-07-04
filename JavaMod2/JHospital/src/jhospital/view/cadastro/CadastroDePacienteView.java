@@ -214,12 +214,12 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
         {
             PacienteController pc = new PacienteController();
             try{
-                pc.inserir(textFieldNome.getText(),
-                        textFieldEmail.getText(),
-                        textFieldEndereco.getText(),
+                pc.inserir(textFieldNome.getText().toUpperCase(),
+                        textFieldEmail.getText().toLowerCase(),
+                        textFieldEndereco.getText().toUpperCase(),
                         textFieldQuarto.getText(),
                         textFieldDoenca.getText(),
-                        textFieldDoenca.getText(),
+                        textFieldDoenca.getText().toUpperCase(),
                         textFieldDiasInternado.getText(),
                         (String)comboBoxPlanoDeSaude.getSelectedItem());
                 JOptionPane.showMessageDialog(this," Contato salvo com sucesso!", " Sucesso", JOptionPane.INFORMATION_MESSAGE );
