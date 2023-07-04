@@ -27,6 +27,10 @@ public class PacienteDAO implements Serializable {
     }
     private EntityManagerFactory emf = null;
 
+    public PacienteDAO() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }

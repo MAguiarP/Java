@@ -43,7 +43,7 @@ public class PacienteController {
     
     public List<Paciente> buscar(String nome, String email)
      throws Exception{
-        return null;
+        return new PacienteDAO().getListaDePacientes(nome, email);
     }
 }
 
