@@ -4,6 +4,8 @@
  */
 package jhospital.view.consulta;
 
+import java.awt.Point;
+import java.awt.event.MouseEvent;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.JTabbedPane;
@@ -33,6 +35,8 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        popupMenu = new javax.swing.JPopupMenu();
+        menuItemApagar = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         textFieldNome = new javax.swing.JTextField();
@@ -45,6 +49,9 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
         jBConsultar = new javax.swing.JButton();
         jBFechar = new javax.swing.JButton();
 
+        menuItemApagar.setText("Apagar");
+        popupMenu.add(menuItemApagar);
+
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Consulta de Paciente");
 
@@ -54,20 +61,20 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
 
         tableResultados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Nome", "Endereço", "Email", "Telefone"
+                "Nome", "Endereço", "Email", "Telefone", "ID"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -76,6 +83,11 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
+            }
+        });
+        tableResultados.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tableResultadosMouseClicked(evt);
             }
         });
         scrollPaneResultados.setViewportView(tableResultados);
@@ -188,7 +200,7 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
                     tableResultados.getModel();
       for (int i = model.getRowCount() - 1; i >= 0; i--){
             model.removeRow(i);
-        }
+       } 
         if (ListaDePacientes != null) {
             for (int i = 0; i< ListaDePacientes.size(); i++) {
                 Paciente paciente = ListaDePacientes.get(i);
@@ -208,6 +220,23 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jBConsultarActionPerformed
 
+    private void tableResultadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableResultadosMouseClicked
+       try{
+           if (evt.getButton() == MouseEvent.BUTTON3){
+               Point p = evt.getPoint();
+               int row = tableResultados.rowAtPoint(p);
+               
+               if(row >= 0 && row < tableResultados.getRowCount()) {
+                   
+               tableResultados.setRowSelectionInterval(row,row );
+               popupMenu.show(evt.getComponent(),evt.getX(),evt.getY());
+               }
+           }
+           } catch (Exception e) {
+          JOptionPane.showMessageDialog(this,"Não foi Possível abrir o popup!\n\n" + e.getLocalizedMessage());
+       
+    }//GEN-LAST:event_tableResultadosMouseClicked
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBConsultar;
@@ -217,6 +246,8 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JMenuItem menuItemApagar;
+    private javax.swing.JPopupMenu popupMenu;
     private javax.swing.JScrollPane scrollPaneResultados;
     private javax.swing.JTable tableResultados;
     private javax.swing.JTextField textFieldEmail;
