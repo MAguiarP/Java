@@ -37,6 +37,7 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
 
         popupMenu = new javax.swing.JPopupMenu();
         menuItemApagar = new javax.swing.JMenuItem();
+        menuItemEditar = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         textFieldNome = new javax.swing.JTextField();
@@ -51,6 +52,9 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
 
         menuItemApagar.setText("Apagar");
         popupMenu.add(menuItemApagar);
+
+        menuItemEditar.setText("jMenuItem1");
+        popupMenu.add(menuItemEditar);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText("Consulta de Paciente");
@@ -247,6 +251,7 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JMenuItem menuItemApagar;
+    private javax.swing.JMenuItem menuItemEditar;
     private javax.swing.JPopupMenu popupMenu;
     private javax.swing.JScrollPane scrollPaneResultados;
     private javax.swing.JTable tableResultados;

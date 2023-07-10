@@ -13,9 +13,8 @@ package jhospital.view.cadastro;
 import javax.swing.JOptionPane;
 import javax.swing.JTabbedPane;
 import jhospital.controller.PacienteController;
+import jhospital.model.Paciente;
 
-
-        
 public class CadastroDePacienteView extends javax.swing.JPanel {
 
    private JTabbedPane tabbedPane;
@@ -183,6 +182,35 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    
+       private Paciente paciente;
+        
+       
+       private void preencherCampos(Integer idPaciente)
+               throws Exception {
+           PacienteController pc = new PacienteController();
+           paciente = pc.buscarPacientePeloId(idPaciente);
+           textFieldNome.setText(paciente.getNome());
+           textFieldEmail.setText(paciente.getEmail());
+           textFieldEndereco.setText(paciente.getEndereco());
+           textFieldTelefone.setText(paciente.getTelefone());
+           textFieldQuarto.setText(String.valueOf(paciente.getNumerodoquarto()));
+           textFieldDoenca.setText(paciente.getDoenca());
+           textFieldDiasInternado.setText(String.valueOf(paciente.getDiasdeinternacao()));
+          if(paciente.getTemplanodesaude()) {
+              
+             comboBoxPlanoDeSaude.setSelectedIndex(0);
+             
+          } else {
+              
+             comboBoxPlanoDeSaude.setSelectedIndex(1);
+
+          }
+           
+           
+       }
+       
+    
     private void buttonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelarActionPerformed
        if(JOptionPane.showConfirmDialog(this, "Deseja mesmo fechar o cadastro de Paciente sem salvar?"," Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
        tabbedPane.remove(this);
