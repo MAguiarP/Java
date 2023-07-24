@@ -12,6 +12,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.table.DefaultTableModel;
 import jhospital.controller.PacienteController;
 import jhospital.model.Paciente;
+import jhospital.view.cadastro.CadastroDePacienteView;
 
 /**
  *
@@ -54,6 +55,11 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
         popupMenu.add(menuItemApagar);
 
         menuItemEditar.setText("jMenuItem1");
+        menuItemEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemEditarActionPerformed(evt);
+            }
+        });
         popupMenu.add(menuItemEditar);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -240,6 +246,23 @@ public class ConsultaDePacienteView extends javax.swing.JPanel {
           JOptionPane.showMessageDialog(this,"Não foi Possível abrir o popup!\n\n" + e.getLocalizedMessage());
        
     }//GEN-LAST:event_tableResultadosMouseClicked
+
+    private void menuItemEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemEditarActionPerformed
+       try {
+           int row = tableResultados.getSelectedRow();
+           DefaultTableModel model = (DefaultTableModel) tableResultados.getModel();
+           CadastroDePacienteView cadastroDePacienteView;
+           CadastroDePacienteView = new CadastroDePacienteView
+        (
+           tabbedPane, Integer.parseInt(model.getValueAt(row, 0).toString()));
+           tabbedPane.add("Edição de pacientes" , cadastroDePacienteView);
+           tabbedPane.setSelectedComponent(cadastroDePacienteView);
+           tabbedPane.revalidate();
+           tabbedPane.repaint();       
+       } catch (Exception ex) {
+           JOptionPane.showMessageDialog(this,"Não é possível editar o paciente! \n\n" + ex.getLocalizedMessage());
+     
+    }//GEN-LAST:event_menuItemEditarActionPerformed
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

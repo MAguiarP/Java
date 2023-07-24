@@ -182,6 +182,14 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+     
+    public CadastroDePacienteView(JTabbedPane tabbedPanel, Integer idPaciente)
+        throws Exception {
+        this.tabbedPane = tabbedPanel;
+        initComponents();
+        preencherCampos(idPaciente);
+    }
+    
     
        private Paciente paciente;
         
@@ -241,17 +249,34 @@ public class CadastroDePacienteView extends javax.swing.JPanel {
            textFieldDoenca != null && !textFieldDoenca.getText().equals("")) 
         {
             PacienteController pc = new PacienteController();
-            try{
-                pc.inserir(textFieldNome.getText().toUpperCase(),
-                        textFieldEmail.getText().toLowerCase(),
-                        textFieldEndereco.getText().toUpperCase(),
-                        textFieldQuarto.getText(),
-                        textFieldDoenca.getText(),
-                        textFieldDoenca.getText().toUpperCase(),
-                        textFieldDiasInternado.getText(),
-                        (String)comboBoxPlanoDeSaude.getSelectedItem());
-                JOptionPane.showMessageDialog(this," Contato salvo com sucesso!", " Sucesso", JOptionPane.INFORMATION_MESSAGE );
-                    limparDados();
+           
+                  if (paciente != null && paciente.getId() != null )
+       {
+           pc.alterar(paciente.getId(),
+                   textFieldNome.getText(),
+                   textFieldEmail.getText(),
+                   textFieldEndereco.getText(),
+                   textFieldTelefone.getText(),
+                   textFieldQuarto.getText(),
+                   textFieldDoenca.getText(),
+                   textFieldDiasInternado.getText(),
+                   (String) comboBoxPlanoDeSaude.getSelectedItem());
+           JOptionPane.showMessageDialog(this, "Contato atualizado com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+           tabbedPane.remove(this);
+           tabbedPane.validate();
+           tabbedPane.repaint();
+
+       } else {
+           pc.inserir(textFieldNome.getText(),
+                   textFieldEmail.getText(),
+                   textFieldEndereco.getText(),
+                   textFieldTelefone.getText(),
+                   textFieldQuarto.getText(),
+                   textFieldDoenca.getText(),
+                   textFieldDiasInternado.getText(),
+                   (String) comboBoxPlanoDeSaude.getSelectedItem()); JOptionPane.showMessageDialog(this, "Contato salvo com sucesso!", "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+                   
+                   limparDados();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(this," Não foi possível salvar contato\n" + e.getLocalizedMessage()," Erro", JOptionPane.ERROR_MESSAGE );
             }
